@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Field Day Lab - The Yard</title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
 <style type="text/css">
@@ -79,22 +80,182 @@ body {
   border-radius: 9999px;
 }
 
+.section {
+  text-align: center;
+  padding: 80px 10vw;
+}
+
+.section-logo {
+  width: 70px;
+}
+
+.section h2 {
+  margin: 25px;
+}
+
+@media (max-width: 800px) {
+  .section {
+    padding: 15px;
+  }
+}
+
+.game-image img {
+  width: 100%;
+}
+.games {
+  border-bottom: 1px solid #ccc;
+}
+@media (min-width: 801px) {
+  .game-half {
+    float: left;
+    width: 50%;
+  }
+  .game-left {
+    border-right: 1px solid #ccc;
+  }
+}
+@media (max-width: 800px) {
+  .game {
+    width: 100%;
+  }
+}
+.game-desc {
+  text-align: center;
+  padding: 30px;
+}
+.game-desc p {
+  margin: 50px 30px;
+}
+
+.play-button {
+  color: white;
+  background-color: rgb(61,183,221);
+  padding: 10px 30px;
+  font-size: 25px;
+  letter-spacing: 5px;
+  border-radius: 999px;
+  box-shadow: 0px 5px rgb(50,135,165);
+}
+
+.raw-link {
+  text-decoration: none;
+}
+
+@media (min-width: 801px) {
+  .narrow-para {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
 </style>
 </head>
 <body>
 
 <div id="navbar">
-  <div id="brand">
-    <img src="assets/icons/brand.png">
-  </div>
-  <div id="hamburger">
-    <img src="assets/icons/hamburger.png">
-  </div>
+  <a href="#">
+    <div id="brand">
+      <img src="assets/icons/brand.png">
+    </div>
+  </a>
+  <a href="#">
+    <div id="hamburger">
+      <img src="assets/icons/hamburger.png">
+    </div>
+  </a>
 </div>
 
 <div id="jumbotron">
-  <div id="play-games">
-    PLAY GAMES!
+  <a href="#">
+    <div id="play-games">
+      PLAY GAMES!
+    </div>
+  </a>
+</div>
+
+<div class="section">
+  <p>
+    <img class="section-logo" src="assets/icons/circles.png">
+  </p>
+  <h2>GAMES</h2>
+  <p class="section-para">
+    Field Day's mini-games are 10-20 minute interactive science games for kids
+    in grades 5-7 to explore, play, and experiment with science. Designed to
+    make complicated systems easier to understand, the games are quick to set
+    up and simple to play. They work on any device. No complicated user
+    accounts are required.
+  </p>
+</div>
+
+<div class="games clearfix">
+  <div class="game-half game-left">
+    <div class="game-image">
+      <img src="assets/large/wind.jpg">
+    </div>
+    <div class="game-desc">
+      <h2>WIND SIMULATOR</h2>
+      <p>
+        When the kids try their hand at a tower building contest,
+        a low pressure system moves in and changes their plans.
+      </p>
+      <p>
+        <a href="#" class="raw-link">
+          <span class="play-button">PLAY!</span>
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="game-half">
+    <div class="game-image">
+      <img src="assets/large/waves.jpg">
+    </div>
+    <div class="game-desc">
+      <h2>WAVE COMBINATOR</h2>
+      <p>
+        Learn how waves interact when Jack and Kit find a mysterious
+        wave combinator in the yard.
+      </p>
+      <p>
+        <a href="#" class="raw-link">
+          <span class="play-button">PLAY!</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p>
+    <img class="section-logo" src="assets/icons/rocket.png">
+  </p>
+  <h2>EXPLORABLE EXPLANATIONS</h2>
+  <p class="section-para">
+    In addition to games, we are also making several explorable explanations.
+    While games are fantastic as establishing a set of rules that establish a
+    logical space for exploring, explorable explanations are more like a
+    collection of simulators, woven together with some text that guide learners
+    on a predefined, but interactive, path. A good EE will have the learner
+    feel like they discovered something that was out of reach before exploring.
+  </p>
+</div>
+
+<div class="games clearfix">
+  <div class="game">
+    <div class="game-image">
+      <img src="assets/large/bacteria.jpg">
+    </div>
+    <div class="game-desc">
+      <h2>BACTERIA!</h2>
+      <p class="narrow-para">
+        When Po eats some nasty pizza he found in the garbage,
+        Scout lays some education on him and Jack about the world of microbes.
+      </p>
+      <p>
+        <a href="#" class="raw-link">
+          <span class="play-button">PLAY!</span>
+        </a>
+      </p>
+    </div>
   </div>
 </div>
 
