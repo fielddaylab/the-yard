@@ -32,7 +32,12 @@ h2 {
 #navbar {
   background-color: rgb(59,59,59);
   color: white;
+  width: 100%;
   height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 #brand {
@@ -145,6 +150,7 @@ h2 {
 
 .raw-link {
   text-decoration: none;
+  color: inherit;
 }
 
 @media (min-width: 801px) {
@@ -209,6 +215,36 @@ h2 {
   width: 100px;
 }
 
+#menu {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  height: 100%;
+  background-color: rgb(34,40,48);
+  color: white;
+  padding: 0 20px;
+  width: 200px;
+  transition-property: right;
+  transition-duration: 0.25s;
+}
+
+.menu-open #menu {
+  right: 0;
+}
+
+p#menu-x {
+  text-align: left !important;
+}
+
+#menu-x img {
+  width: 20px;
+}
+
+#menu p {
+  text-align: center;
+}
+
 </style>
 </head>
 <body>
@@ -219,7 +255,7 @@ h2 {
       <img src="assets/icons/brand.png">
     </div>
   </a>
-  <a href="#">
+  <a href="#" onClick="event.preventDefault(); document.body.className = 'menu-open';">
     <div id="hamburger">
       <img src="assets/icons/hamburger.png">
     </div>
@@ -346,6 +382,24 @@ h2 {
   </p>
   <p>
     A Field Day Experiment
+  </p>
+</div>
+
+<div id="menu">
+  <p id="menu-x">
+    <a href="#" onClick="event.preventDefault(); document.body.className = '';">
+      <img src="assets/icons/x.png">
+    </a>
+  </p>
+  <p>
+    <a href="#" class="raw-link">
+      home
+    </a>
+  </p>
+  <p>
+    <a href="#" class="raw-link">
+      about the yard
+    </a>
   </p>
 </div>
 
