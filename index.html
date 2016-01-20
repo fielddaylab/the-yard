@@ -17,6 +17,10 @@ body {
   letter-spacing: 2px;
 }
 
+h2 {
+  letter-spacing: 4px;
+}
+
 .clearfix:after {
   content: ".";
   visibility: hidden;
@@ -104,6 +108,8 @@ body {
 }
 .games {
   border-bottom: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
 }
 @media (min-width: 801px) {
   .game-half {
@@ -146,6 +152,61 @@ body {
     padding-left: 200px;
     padding-right: 200px;
   }
+}
+
+#about {
+  background-color: rgb(246,246,243);
+  padding: 80px;
+  margin: 0;
+}
+@media (max-width: 800px) {
+  #about {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 801px) {
+  #about-picture {
+    float: right;
+  }
+  #about-picture img {
+    width: 300px;
+    margin: 40px;
+  }
+}
+@media (max-width: 800px) {
+  #about-picture {
+    width: 100%;
+    text-align: center;
+  }
+  #about-picture img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+
+#about-text p {
+  margin-top: 40px;
+}
+
+.learn-more {
+  background-color: rgb(79,79,79);
+  color: white;
+  padding: 10px 40px;
+  border-radius: 999px;
+}
+
+#footer {
+  background-color: rgb(50,50,50);
+  color: white;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#footer img {
+  width: 100px;
 }
 
 </style>
@@ -257,6 +318,35 @@ body {
       </p>
     </div>
   </div>
+</div>
+
+<div id="about" class="clearfix">
+  <div id="about-picture">
+    <img src="assets/large/yard-gate.png">
+  </div>
+  <div id="about-text">
+    <h2>ABOUT THE YARD</h2>
+    <p>
+      The mini-games are played in a delightful world inhabited by a ragtag
+      bunch of kids. The relatable characters and creative setting help link
+      the games together, establishing the purpose and real-world application
+      for each game.
+    </p>
+    <p>
+      <a href="#" class="raw-link">
+        <span class="learn-more">learn more</span>
+      </a>
+    </p>
+  </div>
+</div>
+
+<div id="footer">
+  <p>
+    <img src="assets/icons/field-day.png">
+  </p>
+  <p>
+    A Field Day Experiment
+  </p>
 </div>
 
 </body>
