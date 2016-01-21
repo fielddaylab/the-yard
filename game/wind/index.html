@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Field Day Lab - The Yard</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+<style type="text/css">
+
+* {
+  box-sizing: border-box; /* for my sanity */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  background-color: rgb(246, 246, 243);
+}
+
+h2 {
+  letter-spacing: 4px;
+}
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#navbar {
+  color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#brand {
+  float: left;
+  height: 100%;
+}
+
+#brand img {
+  height: 100%;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#hamburger {
+  float: right;
+  height: 100%;
+}
+
+#hamburger img {
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+#footer {
+  background-color: rgb(50,50,50);
+  color: white;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#footer img {
+  width: 100px;
+}
+
+#menu {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  background-color: rgb(34,40,48);
+  color: white;
+  padding: 0 20px;
+  width: 250px;
+  transition-property: right;
+  transition-duration: 0.25s;
+}
+
+.menu-open #menu {
+  right: 0;
+}
+
+p#menu-x {
+  text-align: left !important;
+}
+
+#menu-x img {
+  width: 25px;
+}
+
+#menu p {
+  text-align: center;
+}
+
+.raw-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-space {
+  height: 50px;
+}
+
+.center-content {
+  text-align: center;
+  padding: 100px;
+}
+
+@media (max-width: 800px) {
+  .center-content {
+    padding: 40px;
+  }
+}
+
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  background-image: url(../../assets/large/wind-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  width: 375px;
+  padding-top: 100px;
+  font-size: 45px;
+}
+
+.comic-page {
+  padding: 25px 100px;
+}
+
+.comic-page img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .comic-page {
+    padding: 25px 0;
+  }
+}
+
+.raw-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.play-button {
+  color: white;
+  background-color: rgb(61,183,221);
+  padding: 10px 30px;
+  font-size: 25px;
+  letter-spacing: 5px;
+  border-radius: 999px;
+  box-shadow: 0px 5px rgb(50,135,165);
+}
+
+</style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="/">
+    <div id="brand">
+      <img src="../../assets/icons/brand.png">
+    </div>
+  </a>
+  <a href="#" onClick="event.preventDefault(); document.body.className = 'menu-open';">
+    <div id="hamburger">
+      <img src="../../assets/icons/hamburger.png">
+    </div>
+  </a>
+</div>
+
+<div class="hero">
+</div>
+
+<h1>That Dastardly 
+Mystery, Wind</h1>
+
+<div class="comic-page">
+  <img src="../../assets/wind-comic/comic-p1.jpg">
+</div>
+
+<div class="comic-page">
+  <img src="../../assets/wind-comic/comic-p2.jpg">
+</div>
+
+<div class="comic-page">
+  <img src="../../assets/wind-comic/comic-p3.jpg">
+</div>
+
+<p style="text-align: center; padding-bottom: 40px;">
+  <a href="play/" class="raw-link">
+    <span class="play-button">PLAY!</span>
+  </a>
+</p>
+
+<div id="footer">
+  <p>
+    <img src="../../assets/icons/field-day.png">
+  </p>
+  <p>
+    A Field Day Experiment
+  </p>
+</div>
+
+<div id="menu">
+  <p id="menu-x">
+    <a href="#" onClick="event.preventDefault(); document.body.className = '';">
+      <img src="../../assets/icons/x.png">
+    </a>
+  </p>
+  <p>
+    <a href="/" class="raw-link">
+      home
+    </a>
+  </p>
+  <p>
+    <a href="/about" class="raw-link">
+      about the yard
+    </a>
+  </p>
+</div>
+
+</body>
+</html>
