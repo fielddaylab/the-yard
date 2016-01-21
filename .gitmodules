@@ -1,0 +1,9 @@
+[submodule "game/wind/play"]
+	path = game/wind/play
+	url = git@github.com:fielddaylab/wind
+[submodule "game/bacteria/play"]
+	path = game/bacteria/play
+	url = git@github.com:fielddaylab/bacteria
+[submodule "game/waves/play"]
+	path = game/waves/play
+	url = git@github.com:fielddaylab/waves
