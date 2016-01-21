@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Field Day Lab - The Yard</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+<style type="text/css">
+
+* {
+  box-sizing: border-box; /* for my sanity */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+}
+
+h2 {
+  letter-spacing: 4px;
+}
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#navbar {
+  background-color: rgb(59,59,59);
+  color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#brand {
+  float: left;
+  height: 100%;
+}
+
+#brand img {
+  height: 100%;
+  padding-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#hamburger {
+  float: right;
+  height: 100%;
+}
+
+#hamburger img {
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+#footer {
+  background-color: rgb(50,50,50);
+  color: white;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#footer img {
+  width: 100px;
+}
+
+#menu {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  background-color: rgb(34,40,48);
+  color: white;
+  padding: 0 20px;
+  width: 250px;
+  transition-property: right;
+  transition-duration: 0.25s;
+}
+
+.menu-open #menu {
+  right: 0;
+}
+
+p#menu-x {
+  text-align: left !important;
+}
+
+#menu-x img {
+  width: 25px;
+}
+
+#menu p {
+  text-align: center;
+}
+
+.raw-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-space {
+  height: 50px;
+}
+
+.center-content {
+  text-align: center;
+  padding: 100px;
+  background-color: white;
+}
+
+@media (max-width: 800px) {
+  .center-content {
+    padding: 40px;
+  }
+}
+
+.gray-bg {
+  background-color: rgb(246,246,243);
+}
+
+h1 {
+  margin: 30px;
+}
+
+.map-markers {
+  text-align: center;
+  background-image: url(../assets/large/map-markers.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: -5px; /* needed to get rid of space below owner image. WHY? */
+  padding: 0;
+}
+
+.the-owner {
+  width: 250px;
+  max-width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+</style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="/">
+    <div id="brand">
+      <img src="../assets/icons/brand.png">
+    </div>
+  </a>
+  <a href="#" onClick="event.preventDefault(); document.body.className = 'menu-open';">
+    <div id="hamburger">
+      <img src="../assets/icons/hamburger.png">
+    </div>
+  </a>
+</div>
+
+<div class="navbar-space">
+</div>
+
+<div class="center-content">
+  <p>
+    <img src="../assets/large/yard-sign.png" style="width: 200px;">
+  </p>
+
+  <h1>ABOUT THE YARD</h1>
+
+  <p>
+    Most adults would just call the Yard an unsafe junk yard that children
+    should absolutely stay away from. Of course that makes the crew even
+    more curious to explore it. Take a look around the Yard. You'll find the
+    section of scrap metal that lived another life as a bike or a jeep or
+    maybe even parts of a space ship.
+  </p>
+
+  <p>
+    Hop over the creek (or wade through it, if you're extra adventurous)
+    and watch how water currents change. Visit the prairie and run your
+    hands through the long grass that has grown up around old crates, statues,
+    and rollerskates. Explore castles created from crates, towers of wood
+    pallets, and half-buried shipping containers with skylights punched
+    through the roofs. Even more mysterious is the Wasteland&hellip;
+    no one re
+    lot of time trying to figure out how the kids keep getting into the Yard
+    and then patching hole s in the fences, filling in holes in the ground,
+    and scratching his head with amazement that the kids keep finding ways
+    to get in.
+  </p>
+</div>
+
+<div class="center-content gray-bg">
+  <h1>ABOUT FIELD DAY</h1>
+
+  <p>
+    Field Day teamed up with Wisconsin teachers to conceive, design and test
+    the games. We will research not only the impact of the individual games on
+    learning but also the way teachers are brought into the process as
+    co-designers. We update and weed out games based on how well they perform
+    with an audience of learners. We give additional time to the games that
+    show high levels of potential impact and we let sub-par concepts die off.
+  </p>
+
+  <p>
+    We are so proud to have been funded by the Wisconsin Department of Public
+    Instruction and the Wisconsin Virtual Schools. We're grateful for the
+    constant support of the Wisconsin Institute for Discovery.
+  </p>
+
+  <p>
+    Want help using these games in your class? We are partnering with WI
+    Virtual Schools and several teachers to create teacher guides and resources
+    to help you integrate these games into your class.
+  </p>
+</div>
+
+<div class="gray-bg map-markers"><img src="../assets/large/owner.png" class="the-owner"></div>
+
+<div id="footer">
+  <p>
+    <img src="../assets/icons/field-day.png">
+  </p>
+  <p>
+    A Field Day Experiment
+  </p>
+</div>
+
+<div id="menu">
+  <p id="menu-x">
+    <a href="#" onClick="event.preventDefault(); document.body.className = '';">
+      <img src="../assets/icons/x.png">
+    </a>
+  </p>
+  <p>
+    <a href="/" class="raw-link">
+      home
+    </a>
+  </p>
+  <p>
+    <a href="/about" class="raw-link">
+      about the yard
+    </a>
+  </p>
+</div>
+
+</body>
+</html>
