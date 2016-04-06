@@ -22,3 +22,7 @@
 h1 {
   margin: 30px;
 }
+
+.text-left {
+  text-align: left;
+}
