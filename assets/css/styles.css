@@ -1,0 +1,396 @@
+/* Colors
+------------------------------------------ */
+.red {
+  color: #DD1C1A; }
+
+.light-red {
+  color: #FCC9C2; }
+
+.blue {
+  color: #06AED5; }
+
+.dark-blue {
+  color: #086788; }
+
+.creme {
+  color: #F6F6F3; }
+
+.ultralight-gray {
+  color: #f5f5f5; }
+
+.light-gray {
+  color: #DDDDDD; }
+
+.gray {
+  color: #5A5F6A; }
+
+.dark-gray {
+  color: #2B303B; }
+
+.black {
+  color: #11141B; }
+
+/* Buttons
+------------------------------------------ */
+.button {
+  display: inline-block;
+  padding: 17px 40px;
+  font-size: 0.8em;
+  line-height: 1.2em;
+  border: 1px solid #2B303B;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: #11141B;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 15px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .button:hover {
+    cursor: pointer;
+    text-decoration: none; }
+  .button:active, .button:visited, .button:focus {
+    text-decoration: none;
+    outline: none; }
+  .button:hover, .button.filled {
+    background: #2B303B;
+    color: #fff; }
+    .button:hover i, .button.filled i {
+      color: #fff; }
+  .button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    text-decoration: none; }
+  .button.red {
+    color: #DD1C1A;
+    border-color: #DD1C1A;
+    background: transparent; }
+    .button.red i {
+      color: #DD1C1A; }
+    .button.red:hover, .button.red.filled {
+      background: #DD1C1A;
+      color: #fff; }
+      .button.red:hover i, .button.red.filled i {
+        color: #fff; }
+  .button.light-red {
+    color: #FCC9C2;
+    border-color: #FCC9C2;
+    background: transparent; }
+    .button.light-red i {
+      color: #FCC9C2; }
+    .button.light-red:hover, .button.light-red.filled {
+      background: #FCC9C2;
+      color: #fff; }
+      .button.light-red:hover i, .button.light-red.filled i {
+        color: #fff; }
+  .button.blue {
+    color: #06AED5;
+    border-color: #06AED5;
+    background: transparent; }
+    .button.blue i {
+      color: #06AED5; }
+    .button.blue:hover, .button.blue.filled {
+      background: #06AED5;
+      color: #fff; }
+      .button.blue:hover i, .button.blue.filled i {
+        color: #fff; }
+  .button.light-blue {
+    color: #086788;
+    border-color: #086788;
+    background: transparent; }
+    .button.light-blue i {
+      color: #086788; }
+    .button.light-blue:hover, .button.light-blue.filled {
+      background: #086788;
+      color: #fff; }
+      .button.light-blue:hover i, .button.light-blue.filled i {
+        color: #fff; }
+  .button.dark-gray {
+    color: #2B303B;
+    border-color: #2B303B;
+    background: transparent; }
+    .button.dark-gray i {
+      color: #2B303B; }
+    .button.dark-gray:hover, .button.dark-gray.filled {
+      background: #2B303B;
+      color: #fff; }
+      .button.dark-gray:hover i, .button.dark-gray.filled i {
+        color: #fff; }
+  .button.disabled {
+    color: #DDDDDD;
+    border-color: #DDDDDD;
+    background: transparent; }
+    .button.disabled i {
+      color: #DDDDDD; }
+    .button.disabled.filled {
+      background: #DDDDDD;
+      color: #fff; }
+      .button.disabled.filled i {
+        color: #fff; }
+  .button.white {
+    color: #fff;
+    border-color: #fff;
+    background: transparent; }
+    .button.white i {
+      color: #fff; }
+    .button.white:hover, .button.white.filled {
+      background: #fff;
+      color: #11141B !important; }
+      .button.white:hover i, .button.white.filled i {
+        color: #11141B; }
+  .button.small {
+    min-width: auto;
+    font-size: 11px;
+    padding: 13px 20px; }
+  .button.xsmall {
+    min-width: auto;
+    font-size: 10px;
+    padding: 10px 15px; }
+  .button.full-width {
+    text-align: center; }
+  .button.round {
+    border-radius: 30px; }
+  .button[disabled='disabled'] {
+    opacity: 0.5;
+    cursor: not-allowed; }
+
+/* Global
+------------------------------------------ */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px; }
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+h2 {
+  letter-spacing: 4px;
+  margin: 25px;
+  font-size: 24px; }
+
+p {
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 30px; }
+
+.handwritten {
+  font-family: 'Sue Ellen Francisco', cursive; }
+
+/* Navigation
+------------------------------------------ */
+#navbar {
+  background-color: #3b3b3b;
+  color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+#brand {
+  float: left;
+  height: 100%; }
+  #brand img {
+    height: 100%;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px; }
+
+#hamburger {
+  float: right;
+  height: 100%; }
+  #hamburger img {
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px; }
+
+#menu {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  background-color: #222830;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  transition-property: right;
+  transition-duration: 0.25s; }
+  #menu a {
+    text-align: center;
+    border-bottom: 1px solid #080D13;
+    padding: 30px 0px;
+    color: #fff;
+    display: block; }
+    #menu a:hover {
+      color: #fff; }
+
+.menu-open #menu {
+  right: 0; }
+
+#menu-x {
+  text-align: left !important; }
+  #menu-x img {
+    width: 25px; }
+
+/* Layout
+------------------------------------------ */
+.section {
+  text-align: center;
+  padding: 100px 10vw;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.section-logo {
+  width: 70px; }
+
+@media (max-width: 800px) {
+  .section {
+    padding: 50px; } }
+
+.game-image img {
+  width: 100%; }
+
+.games {
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+  margin: 0; }
+
+@media (min-width: 801px) {
+  .game-half {
+    float: left;
+    width: 50%; }
+  .game-left {
+    border-right: 1px solid #ccc; } }
+
+@media (max-width: 800px) {
+  .game {
+    width: 100%; } }
+
+.game-desc {
+  text-align: center;
+  padding: 30px; }
+
+.game-desc p {
+  margin: 50px 30px; }
+
+.play-button {
+  color: white;
+  background-color: #3db7dd;
+  padding: 10px 30px;
+  font-size: 25px;
+  letter-spacing: 5px;
+  border-radius: 999px;
+  box-shadow: 0px 5px #3287a5; }
+
+.raw-link {
+  text-decoration: none;
+  color: inherit; }
+
+@media (min-width: 801px) {
+  .narrow-para {
+    padding-left: 200px;
+    padding-right: 200px; } }
+
+#about-wrapper {
+  background-color: #f6f6f3; }
+
+#about {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 80px; }
+
+#about h2 {
+  margin: 25px 25px 25px 0px; }
+
+@media (max-width: 800px) {
+  #about {
+    padding: 30px; } }
+
+@media (min-width: 801px) {
+  #about-picture img {
+    width: 300px;
+    margin: 40px;
+    float: right; } }
+
+@media (max-width: 800px) {
+  #about-picture {
+    width: 100%;
+    text-align: center; }
+  #about-picture img {
+    max-width: 100%;
+    max-height: 300px; } }
+
+#about-text p {
+  margin-top: 40px; }
+
+.learn-more {
+  background-color: #4f4f4f;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 999px; }
+
+/* hero
+------------------------------------------ */
+.hero {
+  width: 100%;
+  height: 90vh;
+  min-height: 40vw;
+  position: relative;
+  background-image: url(../large/jumbotron.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.play-games {
+  position: absolute;
+  color: #3db7dd;
+  background-color: white;
+  padding: 15px;
+  width: 240px;
+  margin: 0 auto;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 9999px; }
+
+/* Footer
+------------------------------------------ */
+#footer {
+  background-color: #323232;
+  color: white;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+  font-size: 12px; }
+
+#footer img {
+  width: 100px; }
+
+#footer2 {
+  background-color: #232323;
+  color: white;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+  font-size: 12px; }
+
+#footer2 img {
+  height: 40px; }
+
+#footer2 a {
+  margin: 10px; }
