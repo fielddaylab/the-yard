@@ -35,7 +35,9 @@
 </script>
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/styles.css">
-<script src="assets/ajs/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script src="assets/js/vendor/jquery.gridder.min.js"></script>
 </head>
 <body>
 
@@ -79,42 +81,30 @@
   <h2>GAMES</h2>
 </div>
 
-<div class="games clearfix" id="games">
-  <div class="game-half game-left">
-    <div class="game-image">
-      <img src="assets/large/wind.jpg">
-    </div>
-    <div class="game-desc">
-      <h2>WIND SIMULATOR</h2>
-      <p>
-        When the kids try their hand at a tower building contest,
-        a low pressure system moves in and changes their plans.
-      </p>
-      <p>
-        <a href="/game/wind" class="raw-link">
-          <span class="play-button">PLAY!</span>
-        </a>
-      </p>
-    </div>
-  </div>
-  <div class="game-half">
-    <div class="game-image">
-      <img src="assets/large/waves.jpg">
-    </div>
-    <div class="game-desc">
-      <h2>WAVE COMBINATOR</h2>
-      <p>
-        Learn how waves interact when Jack and Francis find a mysterious
-        wave combinator in the yard.
-      </p>
-      <p>
-        <a href="/game/waves/play" class="raw-link">
-          <span class="play-button">PLAY!</span>
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
+<!-- Gridder navigation -->
+<ul class="gridder">
+
+     <!-- You can load specify which content is loaded by specifying the #ID of the div where the content is  -->
+    <li class="gridder-list" data-griddercontent="#content1">
+        <img src="http://placehold.it/600x400" />
+    </li>
+    <li class="gridder-list" data-griddercontent="#content2">
+        <img src="http://placehold.it/600x400" />
+    </li>
+    <li class="gridder-list" data-griddercontent="#content3">
+        <img src="http://placehold.it/600x400" />
+    </li>
+
+    <!-- You can also load html/ajax pages by replacing the #ID with a URL -->
+    <li class="gridder-list" data-griddercontent="/content.html">
+        <img src="http://placehold.it/600x400" />
+    </li>
+</ul>
+
+<!-- Gridder content -->
+<div id="content1" class="gridder-content"> Content goes here... </div>
+<div id="content2" class="gridder-content"> Content goes here... </div>
+<div id="content3" class="gridder-content"> Content goes here... </div>
 
 <div class="section">
   <p>
@@ -205,6 +195,34 @@
       about the yard
     </a>
 </div>
+
+<script>
+$(function() {
+
+    // Call Gridder
+    $('.gridder').gridderExpander({
+        scroll: true,
+        scrollOffset: 30,
+        scrollTo: "panel",                  // panel or listitem
+        animationSpeed: 400,
+        animationEasing: "easeInOutExpo",
+        showNav: true,                      // Show Navigation
+        nextText: "Next",                   // Next button text
+        prevText: "Previous",               // Previous button text
+        closeText: "Close",                 // Close button text
+        onStart: function(){
+            //Gridder Inititialized
+        },
+        onContent: function(){
+            //Gridder Content Loaded
+        },
+        onClosed: function(){
+            //Gridder Closed
+        }
+    });
+
+});
+</script>
 
 </body>
 </html>
