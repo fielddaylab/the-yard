@@ -1,10 +1,12 @@
 /* Layout
 ------------------------------------------ */
-.section {
+section {
   text-align: center;
   padding: 100px 10vw;
-  max-width: 1200px;
-  margin: 0 auto;
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .section-logo {

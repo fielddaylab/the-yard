@@ -77,32 +77,103 @@
   <a href=#>Games</a><a href=#>About the Yard</a><a href=#>For Teachers</a>
 </navigation>
 
-<div class="section">
-  <h2>GAMES</h2>
-</div>
+<section class="games">
+  <div class="section-container">
+    <h2>GAMES</h2>
 
-<!-- Gridder navigation -->
-<ul class="gridder">
+    <!-- Gridder navigation -->
+    <ul class="gridder">
 
-     <!-- You can load specify which content is loaded by specifying the #ID of the div where the content is  -->
-    <li class="gridder-list" data-griddercontent="#content1">
-        <img src="http://placehold.it/600x400" />
-    </li>
-    <li class="gridder-list" data-griddercontent="#content2">
-        <img src="http://placehold.it/600x400" />
-    </li>
-    <li class="gridder-list" data-griddercontent="#content3">
-        <img src="http://placehold.it/600x400" />
-    </li>
-
-    <!-- You can also load html/ajax pages by replacing the #ID with a URL -->
-    <li class="gridder-list" data-griddercontent="/content.html">
-        <img src="http://placehold.it/600x400" />
-    </li>
-</ul>
+         <!-- You can load specify which content is loaded by specifying the #ID of the div where the content is  -->
+        <li class="gridder-list" data-griddercontent="#game1">
+        <div class="game-thumbnail">
+          <img src="assets/img/carbon-cycle-bg.jpg">
+        </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+        <li class="gridder-list" data-griddercontent="#game2">
+          <div class="game-thumbnail">
+            <img src="assets/img/carbon-cycle-bg.jpg">
+          </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+        <li class="gridder-list" data-griddercontent="#game3">
+          <div class="game-thumbnail">
+            <img src="assets/img/carbon-cycle-bg.jpg">
+          </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+        <li class="gridder-list" data-griddercontent="#game4">
+          <div class="game-thumbnail">
+            <img src="assets/img/carbon-cycle-bg.jpg">
+          </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+        <li class="gridder-list" data-griddercontent="#game5">
+          <div class="game-thumbnail">
+            <img src="assets/img/carbon-cycle-bg.jpg">
+          </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+        <li class="gridder-list" data-griddercontent="#game6">
+          <div class="game-thumbnail">
+            <img src="assets/img/carbon-cycle-bg.jpg">
+          </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+        <li class="gridder-list" data-griddercontent="#game7">
+          <div class="game-thumbnail">
+            <img src="assets/img/carbon-cycle-bg.jpg">
+          </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+        <li class="gridder-list" data-griddercontent="#game8">
+          <div class="game-thumbnail">
+            <img src="assets/img/carbon-cycle-bg.jpg">
+          </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+        <li class="gridder-list" data-griddercontent="#game9">
+          <div class="game-thumbnail">
+            <img src="assets/img/carbon-cycle-bg.jpg">
+          </div>
+          <div class="card-summary">
+            <h3>Carbon Cycle</h3>
+            <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
+          </div>
+        </li>
+    </ul>
+  </div>
+</section>
 
 <!-- Gridder content -->
-<div id="content1" class="gridder-content"> Content goes here... </div>
+<div id="content1" class="gridder-content">
+
+</div>
 <div id="content2" class="gridder-content"> Content goes here... </div>
 <div id="content3" class="gridder-content"> Content goes here... </div>
 
@@ -202,9 +273,9 @@ $(function() {
     // Call Gridder
     $('.gridder').gridderExpander({
         scroll: true,
-        scrollOffset: 30,
+        scrollOffset: 60,
         scrollTo: "panel",                  // panel or listitem
-        animationSpeed: 400,
+        animationSpeed: 900,
         animationEasing: "easeInOutExpo",
         showNav: true,                      // Show Navigation
         nextText: "Next",                   // Next button text

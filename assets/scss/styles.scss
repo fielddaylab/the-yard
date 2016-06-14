@@ -1,3 +1,4 @@
+@import "mixins";
 @import "mediaqueries";
 @import "colors";
 @import "buttons";
@@ -6,6 +7,5 @@
 @import "navigation";
 @import "layout";
 @import "hero";
+@import "gamegrid";
 @import "footer";
-@import "vendor/jquery.gridder.scss";
-@import "mixins";
