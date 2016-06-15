@@ -2176,7 +2176,8 @@ section {
       height: auto; }
   .gridder-list .card-summary {
     padding: 10px 25px 20px 25px;
-    border-bottom: 3px #5A5F6A; }
+    border-bottom: 3px #5A5F6A;
+    position: relative; }
     .gridder-list .card-summary h3 {
       font-size: 1.3em;
       text-transform: uppercase;
@@ -2191,16 +2192,54 @@ section {
       transform: scale(1.1, 1.1); }
     .gridder-list:hover h3, .gridder-list:hover p, .gridder-list.selectedItem h3, .gridder-list.selectedItem p {
       color: #fff; }
+  .gridder-list .card-triangle {
+    position: absolute;
+    bottom: -15px;
+    width: 0;
+    height: 0;
+    left: 50%;
+    margin-left: -7px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #F0C808;
+    display: block;
+    opacity: 0;
+    transition: all .3s ease-in-out; }
+
+.selectedItem .card-triangle {
+  opacity: 1; }
 
 .gridder-navigation {
-  padding: 20px 0px;
   position: relative;
   width: 92%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: block;
+  overflow: hidden;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff; }
+  .gridder-navigation a {
+    transition: all .1s ease-in-out;
+    font-size: 2em;
+    padding: 10px 10px 10px 12px;
+    background: transparent; }
+    .gridder-navigation a:hover {
+      background: #fff;
+      color: #F0C808; }
   .gridder-navigation .nav-left {
+    display: inline-block;
     float: left; }
+    .gridder-navigation .nav-left a {
+      border-right: 3px solid #fff;
+      border-left: 3px solid #fff; }
   .gridder-navigation .nav-right {
+    display: inline-block;
     float: right; }
+    .gridder-navigation .nav-right a:first-child {
+      border-right: 3px solid #fff;
+      border-left: 3px solid #fff; }
+    .gridder-navigation .nav-right a:last-child {
+      border-right: 3px solid #fff; }
 
 .gridder-show {
   display: block;
@@ -2220,11 +2259,11 @@ section {
   .gridder-expanded-content .game-expanded {
     padding-left: 40px; }
   .gridder-expanded-content .game-info-container {
-    border-top: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-    margin: 30px 0px; }
+    margin: 30px 0px;
+    background: #fff;
+    border-radius: 20px; }
     .gridder-expanded-content .game-info-container .game-info {
-      padding: 30px 20px 40px 20px; }
+      padding: 30px 20px 40px 40px; }
       .gridder-expanded-content .game-info-container .game-info h4 {
         margin-bottom: 20px; }
       .gridder-expanded-content .game-info-container .game-info ul {
@@ -2233,22 +2272,25 @@ section {
         list-style: none;
         text-indent: 0px;
         font-weight: 200; }
-      .gridder-expanded-content .game-info-container .game-info:nth-child(2) {
-        border-left: 3px solid #fff;
-        border-right: 3px solid #fff; }
   .gridder-expanded-content h3 {
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: .3em; }
+    letter-spacing: .15em;
+    margin-bottom: 30px; }
   .gridder-expanded-content p {
     font-weight: 200; }
   .gridder-expanded-content .game-thumbnail-expanded {
     overflow: hidden;
     display: block;
-    height: 40vh; }
+    height: 40vh;
+    position: relative; }
     .gridder-expanded-content .game-thumbnail-expanded img {
       width: 100%;
       height: auto; }
+  .gridder-expanded-content .play-game {
+    font-size: 1.4em;
+    font-weight: 400;
+    letter-spacing: .3em; }
 
 /* Footer
 ------------------------------------------ */
