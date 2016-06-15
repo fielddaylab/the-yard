@@ -1964,17 +1964,41 @@ p, a {
   height: 90px;
   width: 100%;
   background: #fff;
-  padding: 33px;
+  padding: 30px;
   display: block;
   position: absolute;
   text-align: center;
   bottom: 0px;
-  border-bottom: 1px solid #DDDDDD; }
+  border-bottom: 1px solid #DDDDDD;
+  overflow: hidden; }
+  .subnav .darklogo {
+    width: 90px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    transform: translateX(-120px);
+    top: 20px; }
   .subnav a {
     display: inline-block;
     color: #11141B;
     margin: 0px 5vw;
     font-weight: 300; }
+  .subnav.nav-fixed {
+    position: fixed;
+    top: -90px;
+    height: 70px;
+    padding: 21px;
+    transition: translateY(-90px);
+    animation: navDrop .4s forwards; }
+    .subnav.nav-fixed .darklogo {
+      transform: translateX(0px);
+      transition: all .4s ease-in-out; }
+
+@keyframes navDrop {
+  from {
+    top: -90px; }
+  to {
+    top: 0px; } }
 
 /* Layout
 ------------------------------------------ */

@@ -58,18 +58,19 @@
        <div class="main-cta">
          <h1>Teach Science with Games!</h1>
          <h3 class="handwritten">BTW, They are Free and Online, Relax</h3>
-         <div class="play-games">
+         <a href="#games" class="play-games">
            PLAY GAMES!
-         </div>
+         </a>
        </div>
        <navigation class="subnav">
-         <a href=#>Games</a><a href=#>About the Yard</a><a href=#>For Teachers</a>
+         <img class="darklogo" src="assets/img/yard-logo-dark.png">
+         <a href=#games>Games</a><a href=#>About the Yard</a><a href=#>For Teachers</a>
        </navigation>
     </div>
   </div>
 </div>
 
-<section class="games">
+<section id="games" class="games">
   <div class="section-container">
     <h2>GAMES</h2>
 
@@ -306,7 +307,7 @@ $(function() {
     // Call Gridder
     $('.gridder').gridderExpander({
         scroll: true,
-        scrollOffset: 60,
+        scrollOffset: 100,
         scrollTo: "panel",                  // panel or listitem
         animationSpeed: 900,
         animationEasing: "easeInOutExpo",
@@ -325,7 +326,37 @@ $(function() {
         }
     });
 });
+
+var  mn = $(".subnav");
+    mns = "nav-fixed";
+    hdr = $('.hero').height();
+
+$(window).scroll(function() {
+  if( $(this).scrollTop() > hdr ) {
+    mn.addClass(mns);
+  } else {
+    mn.removeClass(mns);
+  }
+});
+
+// smooth scroll
+$(document).ready(function(){
+  $('a[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+
+      var target = this.hash;
+      var $target = $(target);
+
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+          window.location.hash = target;
+      });
+  });
+});
 </script>
+
+
 
 </body>
 </html>
