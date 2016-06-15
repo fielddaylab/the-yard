@@ -22,7 +22,7 @@
 <meta charset="UTF-8">
 <title>Field Day Lab - The Yard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco|Montserrat' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,300,600,700|Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 <script src="assets/js/vendor/jquery-3.0.0.min.js"></script>
-<script src="assets/js/vendor/jquery.gridder.min.js"></script>
+<script src="assets/js/vendor/jquery.gridder.js"></script>
 </head>
 <body>
 
@@ -51,11 +51,6 @@
           <a href="/">
             <div id="brand">
               <img src="assets/img/yard-logo.png">
-            </div>
-          </a>
-          <a href="#" onClick="event.preventDefault(); document.body.className = 'menu-open';">
-            <div id="hamburger">
-              <img src="assets/icons/hamburger.png">
             </div>
           </a>
         </div>
@@ -171,11 +166,43 @@
 </section>
 
 <!-- Gridder content -->
-<div id="content1" class="gridder-content">
-
+<div id="game1" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/carbon-cycle-bg.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play the carbon cycle game!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-md-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-md-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-md-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled"> play! </a>
+    </div>
+  </div>
 </div>
-<div id="content2" class="gridder-content"> Content goes here... </div>
-<div id="content3" class="gridder-content"> Content goes here... </div>
+<div id="game2" class="gridder-content"> Content goes here... </div>
+<div id="game3" class="gridder-content"> Content goes here... </div>
 
 <div class="section">
   <p>
@@ -291,7 +318,6 @@ $(function() {
             //Gridder Closed
         }
     });
-
 });
 </script>
 

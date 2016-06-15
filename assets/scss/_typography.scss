@@ -4,12 +4,15 @@ h2 {
   font-size: 24px;
 }
 
-p {
- font-size: 18px;
- letter-spacing: 1px;
- line-height: 24px;
+p, a {
+ font-family: 'Open Sans', sans-serif;
+ font-size: 1.2em;
+ letter-spacing: .1em;
+ line-height: 1.7em;
+ font-weight: 300;
 }
 
 .handwritten {
   font-family: 'Sue Ellen Francisco', cursive;
+  text-transform: none;
 }

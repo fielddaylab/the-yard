@@ -19,6 +19,8 @@
     width: 29%;
     margin: 1%;
     margin-bottom: 2%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
     .game-thumbnail {
       width: 100%;
       height: 20vh;
@@ -26,12 +28,13 @@
       display: block;
       overflow: hidden;
       img {
+        transition: all .2s ease-in-out;
         width: 100%;
         height: auto;
       }
     }
     .card-summary {
-      padding: 10px 20px 20px 20px;
+      padding: 10px 25px 20px 25px;
       border-bottom: 3px $gray;
       h3 {
         font-size: 1.3em;
@@ -39,13 +42,27 @@
         margin-bottom: 20px;
       }
       p {
-        font-size: .8em;
+        font-size: 1em;
         font-weight: 300;
         min-height: 110px;
       }
     }
+    &:hover, &.selectedItem {
+      img { transform: scale(1.1, 1.1); }
+      background: $yellow;
+      h3, p { color: #fff; }
+    }
 
 }
+.gridder-navigation {
+  padding: 20px 0px;
+  position: relative;
+  width: 92%;
+  margin: 0 auto;
+  .nav-left { float: left; }
+  .nav-right { float: right; }
+}
+
 .gridder-show{
     display: block;
     float: left;
@@ -53,5 +70,42 @@
     position: relative;
 }
 .gridder-content{
-    display: none;
+  height: 0px; overflow: hidden;
+}
+
+.gridder-expanded-content {
+  text-align: left;
+  width: 92%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  .game-expanded {
+    padding-left: 40px;
+  }
+  .game-info-container {
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    margin: 30px 0px;
+    .game-info {
+      padding: 30px 20px 40px 20px;
+      h4 { margin-bottom: 20px; }
+      ul { padding-left: 0px; }
+      li {
+        list-style: none;
+        text-indent: 0px;
+        font-weight: 200;
+      }
+      &:nth-child(2) {
+        border-left: 3px solid #fff;
+        border-right: 3px solid #fff;
+      }
+    }
+  }
+  h3 { text-transform: uppercase; font-weight: 600; letter-spacing: .3em; }
+  p { font-weight: 200; }
+  .game-thumbnail-expanded {
+    overflow: hidden;
+    display: block;
+    height: 40vh;
+    img { width: 100%; height: auto; }
+  }
 }
