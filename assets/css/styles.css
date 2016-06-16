@@ -2008,9 +2008,10 @@ section {
   section .section-container {
     max-width: 1200px;
     margin: 0 auto; }
-
-.section-logo {
-  width: 70px; }
+  section .embelishment {
+    width: 90px;
+    height: auto;
+    margin: 0 auto; }
 
 @media (max-width: 800px) {
   .section {
@@ -2097,6 +2098,64 @@ section {
   color: white;
   padding: 10px 40px;
   border-radius: 999px; }
+
+/* Teacher Quotes
+--------------------------- */
+.teacher-quotes h2 {
+  margin-bottom: 50px; }
+
+.teacher-quote {
+  padding: 60px; }
+  .teacher-quote h3 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: .3em;
+    margin-bottom: 20px; }
+  .teacher-quote:nth-child(even)::before {
+    content: "";
+    width: 20px;
+    height: 100%;
+    background: url("../img/curly-rule.png") no-repeat;
+    position: absolute;
+    left: -10px;
+    top: 18%;
+    background-size: 16px 333px; }
+  .teacher-quote:nth-child(even)::after {
+    content: "";
+    width: 20px;
+    height: 100%;
+    background: url("../img/curly-rule.png") no-repeat;
+    position: absolute;
+    right: -10px;
+    top: 18%;
+    background-size: 16px 333px; }
+  .teacher-quote .flavor-text {
+    color: #06AED5; }
+  .teacher-quote .teacher-thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: relative;
+    margin: 0 auto; }
+    .teacher-quote .teacher-thumb.one {
+      background: url("../img/teacher-dominique.png") no-repeat;
+      background-size: 100px 100px; }
+    .teacher-quote .teacher-thumb.two {
+      background: url("../img/teacher-jenny.png") no-repeat;
+      background-size: 100px 100px; }
+    .teacher-quote .teacher-thumb.three {
+      background: url("../img/teacher-joe.png") no-repeat;
+      background-size: 100px 100px; }
+    .teacher-quote .teacher-thumb .quotes {
+      width: 60px;
+      height: 50px;
+      position: absolute;
+      background: url(../img/quotes.png) no-repeat;
+      background-size: 60px 50px;
+      top: -20px;
+      left: -20px;
+      mix-blend-mode: multiply; }
 
 /* hero
 ------------------------------------------ */
