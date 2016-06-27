@@ -1749,12 +1749,13 @@
 .button {
   display: inline-block;
   padding: 17px 40px;
-  font-size: 0.8em;
+  font-size: 1.2em;
   line-height: 1.2em;
-  border: 1px solid #2B303B;
+  border: 3px solid #2B303B;
   text-transform: uppercase;
   letter-spacing: .15em;
   color: #11141B;
+  font-weight: 400;
   background: transparent;
   box-shadow: none;
   border-radius: 99px;
@@ -1908,10 +1909,9 @@ p, a {
 #navbar {
   color: white;
   width: 100%;
-  height: 120px;
+  height: 170px;
   z-index: 1;
-  padding: 20px;
-  background: linear-gradient(to bottom, rgba(58, 59, 59, 0.5), rgba(58, 59, 59, 0)); }
+  padding: 35px; }
 
 #brand {
   float: left;
@@ -2156,61 +2156,90 @@ section {
       top: -20px;
       left: -20px;
       mix-blend-mode: multiply; }
+  .teacher-quote hr {
+    height: 6px;
+    width: 40px;
+    background: #06AED5;
+    margin: 0 auto;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px; }
 
 /* hero
 ------------------------------------------ */
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   min-height: 40vw;
   position: relative;
-  background: url("../img/teal-gradient.png") repeat-x; }
+  background-position: center;
+  background: linear-gradient(to bottom, #15869c, #f3fdff); }
   .hero .animated {
-    width: inherit;
+    width: 100%;
     height: inherit;
     position: relative; }
     .hero .animated .clouds {
       position: absolute;
       width: 100%;
-      height: 20vh;
+      height: 100vh;
       display: block;
       z-index: 100; }
       .hero .animated .clouds.clouds1 {
-        background: url("../img/clouds1.png") repeat-x;
-        background-size: 500px 124px;
-        top: 10vh;
+        background: url("../img/clouds-new2.png") repeat-x;
+        background-size: 2000px 600px;
+        opacity: 0.7;
+        top: 20vh;
         left: 0;
-        animation: cloudMotion 40s linear infinite; }
+        animation: cloudMotion 30s linear infinite; }
       .hero .animated .clouds.clouds2 {
-        background: url("../img/clouds2.png") repeat-x;
-        background-size: 250px 62px;
-        top: 35vh;
+        background: url("../img/clouds-new2.png") repeat-x;
+        background-size: 900px 300px;
+        top: 70vh;
         left: 0;
-        animation: cloudMotion 90s linear infinite; }
+        opacity: 0.7;
+        animation: cloudMotion2 60s linear infinite; }
+  .hero .balloon {
+    width: 180px;
+    height: 90px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    left: -200px;
+    animation: balloonMotion 40s 5s linear infinite; }
+    .hero .balloon img {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      animation: balloonbounce 30s linear infinite; }
   .hero .yard {
-    position: relative;
-    background: url("../img/front-entrance-revised.png") no-repeat;
-    background-size: cover;
+    position: absolute;
+    background: url("../img/front-entrance-small.png") no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
     width: 100%;
-    height: 100vh;
-    z-index: 200; }
+    height: 150vh;
+    z-index: 200;
+    bottom: 0; }
     .hero .yard .main-cta {
       position: absolute;
-      bottom: 90px;
+      top: 90px;
       width: 100%;
       height: 500px;
       color: #fff;
       text-transform: uppercase;
       text-align: center;
-      background: linear-gradient(to top, #339dc5, rgba(51, 157, 197, 0));
       padding-bottom: -10vh; }
       .hero .yard .main-cta h1, .hero .yard .main-cta h2, .hero .yard .main-cta h3 {
-        margin-bottom: 6vh; }
+        margin-bottom: 6vh;
+        text-shadow: 0px 2px 3px #6C6A6A; }
       .hero .yard .main-cta h1 {
         font-weight: 600;
-        font-size: 2.4em;
+        font-size: 4vw;
         letter-spacing: .4em;
-        margin-top: 200px; }
+        margin-top: 200px;
+        line-height: 5vw; }
+      .hero .yard .main-cta h3 {
+        font-size: 2.5vw; }
       .hero .yard .main-cta .play-games {
         color: #11141B;
         background-color: white;
@@ -2227,7 +2256,27 @@ section {
   from {
     background-position: 0 0; }
   to {
-    background-position: 100% 0; } }
+    background-position: 2000px 0; } }
+
+@keyframes cloudMotion2 {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 900px 0; } }
+
+@keyframes balloonMotion {
+  from {
+    transform: translate(0, 0); }
+  to {
+    transform: translate(120vw, 0); } }
+
+@keyframes balloonbounce {
+  0% {
+    transform: translate(0px, 0px); }
+  50% {
+    transform: translate(0px, -200px); }
+  100% {
+    transform: translate(0px, 0px); } }
 
 /* Gridder Game Grid
 --------------------------- */
@@ -2376,6 +2425,16 @@ section {
     font-size: 1.4em;
     font-weight: 400;
     letter-spacing: .3em; }
+
+.aboutgames {
+  background: #F0C808; }
+  .aboutgames .embelishment {
+    margin-bottom: 20px; }
+  .aboutgames h2, .aboutgames p {
+    color: #fff;
+    margin: 20px 0px; }
+  .aboutgames h2 {
+    text-transform: uppercase; }
 
 /* Footer
 ------------------------------------------ */
