@@ -84,6 +84,9 @@
   .join-yard {
     margin-right: 0px;
     margin-top: -4px;
+    position: absolute;
+    right: 10px;
+     display: none;
   }
   .darklogo {
     width: 90px;
@@ -106,6 +109,9 @@
     padding: 21px;
     transition:translateY(-90px);
     animation: navDrop .4s forwards;
+    .join-yard {
+      display: inline-block;
+    }
     .darklogo {
       transform: translateX(0px);
       transition: all .4s ease-in-out;

@@ -14,6 +14,17 @@ section {
   }
 }
 
+/* join the yard modal
+------------------------------------------ */
+.join-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: $yellow;
+  display: block;
+  z-index: 1000;
+}
+
 /* stories
 ------------------------------------------ */
 
@@ -50,7 +61,7 @@ section {
     height: 40vw;
     float: right;
     position: relative;
-    background: #fff;
+    background: $creme;
     .link-content {
       @include vertical-align;
     }
@@ -84,7 +95,7 @@ section {
     margin-top:-15px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
+    border-right: 15px solid $creme;
     display: block;
   }
   .button {
@@ -111,29 +122,13 @@ section {
       right: initial;
       left:0;
       border-right: initial;
-      border-left: 15px solid #fff;
+      border-left: 15px solid $creme;
     }
      .link-flag {
       background: url('../img/flag-blue.png') no-repeat;
       background-size: 75px 50px;
      }
   }
-}
-
-.game-image img {
-  width: 100%;
-}
-.games {
-  border-bottom: 1px solid #ccc;
-  padding: 0;
-  margin: 0;
-}
-.game-desc {
-  text-align: center;
-  padding: 30px;
-}
-.game-desc p {
-  margin: 50px 30px;
 }
 
 .play-button {
@@ -151,22 +146,29 @@ section {
   color: inherit;
 }
 
-#about-wrapper {
-  background-color: rgb(246,246,243);
-}
-
-#about {
-  margin: 0 auto;
-  max-width: 1400px;
-  padding: 80px;
-}
-
-#about h2 {
-  margin: 25px 25px 25px 0px;
-}
-
-#about-text p {
-  margin-top: 40px;
+.about-wrapper {
+  background: $creme;
+  .about {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 80px;
+    position: relative;
+    .about-content {
+      @include vertical-align;
+    }
+    .about-picture {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+    h2 {
+      margin: 25px 25px 25px 0px;
+    }
+    p {
+      margin-top: 40px;
+    }
+  }
 }
 
 .learn-more {

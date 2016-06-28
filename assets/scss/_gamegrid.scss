@@ -19,13 +19,13 @@
     display: inline-block;
     vertical-align: top;
     background: #fff;
-    width: 47%;
+    width: 29%;
     margin: 1%;
     margin-bottom: 2%;
     cursor: pointer;
     transition: all .3s ease-in-out;
-    @media #{$break-ipadmini} {
-      width: 29%;
+    @media #{$break-md} {
+      width: 47%;
     }
     @media #{$break-sm} {
       width: 95%;
