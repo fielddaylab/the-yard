@@ -6,7 +6,18 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2px;
+  color: $dark_gray;
 }
+
+hr {
+    height: 6px;
+    width: 40px;
+    background: $blue;
+    margin: 0 auto;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
 
 .clearfix:after {
   content: ".";

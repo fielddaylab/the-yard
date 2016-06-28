@@ -1729,6 +1729,9 @@
 .yellow {
   color: #F0C808; }
 
+.dark-yellow {
+  color: #D4B000; }
+
 .ultralight-gray {
   color: #f5f5f5; }
 
@@ -1764,6 +1767,9 @@
   margin-right: 15px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1) {
+    .button {
+      padding: 12px 30px; } }
   .button:hover {
     cursor: pointer;
     text-decoration: none; }
@@ -1879,7 +1885,17 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  color: #2B303B; }
+
+hr {
+  height: 6px;
+  width: 40px;
+  background: #06AED5;
+  margin: 0 auto;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 10px; }
 
 .clearfix:after {
   content: ".";
@@ -1895,10 +1911,10 @@ h2 {
 
 p, a {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   letter-spacing: .1em;
-  line-height: 1.7em;
-  font-weight: 300; }
+  line-height: 1.9em;
+  font-weight: 500; }
 
 .handwritten {
   font-family: 'Sue Ellen Francisco', cursive;
@@ -1910,14 +1926,19 @@ p, a {
   color: white;
   width: 100%;
   height: 170px;
-  z-index: 1;
-  padding: 35px; }
+  z-index: 500;
+  padding: 25px;
+  position: absolute; }
+
+.join-yard {
+  float: right;
+  margin-right: 0px; }
 
 #brand {
   float: left;
   height: 100%; }
   #brand img {
-    height: 100%;
+    height: 60%;
     padding-left: 10px;
     padding-top: 7px;
     padding-bottom: 7px; }
@@ -1961,16 +1982,19 @@ p, a {
     width: 25px; }
 
 .subnav {
-  height: 90px;
+  height: 70px;
   width: 100%;
   background: #fff;
-  padding: 30px;
+  padding: 20px;
   display: block;
   position: absolute;
   text-align: center;
   bottom: 0px;
   border-bottom: 1px solid #DDDDDD;
   overflow: hidden; }
+  .subnav .join-yard {
+    margin-right: 0px;
+    margin-top: -4px; }
   .subnav .darklogo {
     width: 90px;
     height: auto;
@@ -1981,8 +2005,7 @@ p, a {
   .subnav a {
     display: inline-block;
     color: #11141B;
-    margin: 0px 5vw;
-    font-weight: 300; }
+    margin: 0px 5vw; }
   .subnav.nav-fixed {
     position: fixed;
     top: -90px;
@@ -2013,9 +2036,96 @@ section {
     height: auto;
     margin: 0 auto; }
 
-@media (max-width: 800px) {
-  .section {
-    padding: 50px; } }
+/* stories
+------------------------------------------ */
+.story-links {
+  overflow: hidden;
+  height: auto; }
+  .story-links a {
+    font-family: 'Montserrat', sans-serif; }
+    .story-links a p {
+      color: #2B303B; }
+  .story-links .link-flag {
+    display: inline-block;
+    background: url("../img/flag-yellow.png") no-repeat;
+    width: 75px;
+    height: 50px;
+    background-size: 75px 50px;
+    transform: translate(-40px, 10px); }
+  .story-links .story-bg {
+    overflow: hidden;
+    width: 50%;
+    height: 40vw;
+    float: left;
+    position: relative;
+    -webkit-filter: grayscale(100%);
+    /* Chrome, Safari, Opera */
+    filter: grayscale(100%); }
+  .story-links .link-wrap {
+    padding: 10vw;
+    text-align: left;
+    width: 50%;
+    height: 40vw;
+    float: right;
+    position: relative;
+    background: #fff; }
+    .story-links .link-wrap .link-content {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+  .story-links h3 {
+    color: #D4B000; }
+  .story-links .button {
+    color: #D4B000;
+    border: 3px solid #D4B000; }
+    .story-links .button:hover {
+      background-color: #D4B000;
+      color: #fff; }
+      .story-links .button:hover ~ .story-bg {
+        -webkit-filter: grayscale(0%);
+        /* Chrome, Safari, Opera */
+        filter: grayscale(0%); }
+  .story-links hr {
+    background: #D4B000;
+    margin-top: 20px;
+    width: 70px; }
+  .story-links .story-triangle {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    right: 0;
+    margin-top: -15px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    display: block; }
+  .story-links .button {
+    margin-top: 20px; }
+  .story-links:nth-child(odd) h3 {
+    color: #06AED5; }
+  .story-links:nth-child(odd) hr {
+    background: #06AED5; }
+  .story-links:nth-child(odd) .button {
+    color: #06AED5;
+    border: 3px solid #06AED5; }
+    .story-links:nth-child(odd) .button:hover {
+      background-color: #06AED5;
+      color: #fff; }
+  .story-links:nth-child(odd) .story-bg {
+    float: right; }
+  .story-links:nth-child(odd) .link-wrap {
+    float: left; }
+  .story-links:nth-child(odd) .story-triangle {
+    right: initial;
+    left: 0;
+    border-right: initial;
+    border-left: 15px solid #fff; }
+  .story-links:nth-child(odd) .link-flag {
+    background: url("../img/flag-blue.png") no-repeat;
+    background-size: 75px 50px; }
 
 .game-image img {
   width: 100%; }
@@ -2024,17 +2134,6 @@ section {
   border-bottom: 1px solid #ccc;
   padding: 0;
   margin: 0; }
-
-@media (min-width: 801px) {
-  .game-half {
-    float: left;
-    width: 50%; }
-  .game-left {
-    border-right: 1px solid #ccc; } }
-
-@media (max-width: 800px) {
-  .game {
-    width: 100%; } }
 
 .game-desc {
   text-align: center;
@@ -2056,11 +2155,6 @@ section {
   text-decoration: none;
   color: inherit; }
 
-@media (min-width: 801px) {
-  .narrow-para {
-    padding-left: 200px;
-    padding-right: 200px; } }
-
 #about-wrapper {
   background-color: #f6f6f3; }
 
@@ -2071,24 +2165,6 @@ section {
 
 #about h2 {
   margin: 25px 25px 25px 0px; }
-
-@media (max-width: 800px) {
-  #about {
-    padding: 30px; } }
-
-@media (min-width: 801px) {
-  #about-picture img {
-    width: 300px;
-    margin: 40px;
-    float: right; } }
-
-@media (max-width: 800px) {
-  #about-picture {
-    width: 100%;
-    text-align: center; }
-  #about-picture img {
-    max-width: 100%;
-    max-height: 300px; } }
 
 #about-text p {
   margin-top: 40px; }
@@ -2156,14 +2232,6 @@ section {
       top: -20px;
       left: -20px;
       mix-blend-mode: multiply; }
-  .teacher-quote hr {
-    height: 6px;
-    width: 40px;
-    background: #06AED5;
-    margin: 0 auto;
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-top: 10px; }
 
 /* hero
 ------------------------------------------ */
@@ -2171,13 +2239,15 @@ section {
   width: 100%;
   height: 150vh;
   min-height: 40vw;
+  z-index: 200;
   position: relative;
   background-position: center;
   background: linear-gradient(to bottom, #15869c, #f3fdff); }
   .hero .animated {
     width: 100%;
     height: inherit;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .hero .animated .clouds {
       position: absolute;
       width: 100%;
@@ -2189,15 +2259,19 @@ section {
         background-size: 2000px 600px;
         opacity: 0.7;
         top: 20vh;
-        left: 0;
-        animation: cloudMotion 30s linear infinite; }
+        left: 0; }
+        @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+          .hero .animated .clouds.clouds1 {
+            animation: cloudMotion 30s linear infinite; } }
       .hero .animated .clouds.clouds2 {
         background: url("../img/clouds-new2.png") repeat-x;
         background-size: 900px 300px;
         top: 70vh;
         left: 0;
-        opacity: 0.7;
-        animation: cloudMotion2 60s linear infinite; }
+        opacity: 0.7; }
+        @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+          .hero .animated .clouds.clouds2 {
+            animation: cloudMotion 30s linear infinite; } }
   .hero .balloon {
     width: 180px;
     height: 90px;
@@ -2220,11 +2294,18 @@ section {
     height: 150vh;
     z-index: 200;
     bottom: 0; }
+    .hero .yard .main-cta-wrap {
+      height: 100vh;
+      position: relative; }
     .hero .yard .main-cta {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
       position: absolute;
-      top: 90px;
       width: 100%;
-      height: 500px;
+      height: auto;
       color: #fff;
       text-transform: uppercase;
       text-align: center;
@@ -2236,10 +2317,16 @@ section {
         font-weight: 600;
         font-size: 4vw;
         letter-spacing: .4em;
-        margin-top: 200px;
         line-height: 5vw; }
+        @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1) {
+          .hero .yard .main-cta h1 {
+            font-size: 6vw;
+            line-height: 8vw; } }
       .hero .yard .main-cta h3 {
         font-size: 2.5vw; }
+        @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1) {
+          .hero .yard .main-cta h3 {
+            font-size: 4vw; } }
       .hero .yard .main-cta .play-games {
         color: #11141B;
         background-color: white;
@@ -2282,7 +2369,10 @@ section {
 --------------------------- */
 .games {
   background: #F6F6F3;
-  padding: 15vh; }
+  padding: 10vw; }
+  @media only screen and (max-width: 400px) and (-webkit-min-device-pixel-ratio: 1) {
+    .games {
+      padding: 6vh; } }
 
 .gridder {
   margin: 0px;
@@ -2293,11 +2383,17 @@ section {
   display: inline-block;
   vertical-align: top;
   background: #fff;
-  width: 29%;
+  width: 47%;
   margin: 1%;
   margin-bottom: 2%;
   cursor: pointer;
   transition: all .3s ease-in-out; }
+  @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .gridder-list {
+      width: 29%; } }
+  @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+    .gridder-list {
+      width: 95%; } }
   .gridder-list .game-thumbnail {
     width: 100%;
     height: 20vh;
@@ -2322,8 +2418,6 @@ section {
       min-height: 110px; }
   .gridder-list:hover, .gridder-list.selectedItem {
     background: #F0C808; }
-    .gridder-list:hover img, .gridder-list.selectedItem img {
-      transform: scale(1.1, 1.1); }
     .gridder-list:hover h3, .gridder-list:hover p, .gridder-list.selectedItem h3, .gridder-list.selectedItem p {
       color: #fff; }
   .gridder-list .card-triangle {

@@ -19,6 +19,9 @@
   margin-right:15px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  @media #{$break-md} {
+    padding: 12px 30px;
+  }
   &:hover { cursor: pointer; text-decoration: none; }
   &:active, &:visited, &:focus { text-decoration: none; outline: none; }
   &:hover, &.filled {
