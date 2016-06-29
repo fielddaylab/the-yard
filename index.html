@@ -43,30 +43,40 @@
 <body>
 
 <div class="hero">
-   <div class="yard">
-      <div class="main-cta-wrap">
-        <div class="main-cta">
-          <h1>Teach Science <br> with Games!</h1>
-          <h3 class="handwritten">BTW, They are Free and Online, Relax</h3>
-          <a href="#games" class="button white">
-             PLAY GAMES!
-          </a>
-        </div>
-      </div>
-      <navigation class="subnav">
-        <img class="darklogo" src="assets/img/yard-logo-dark.png">
-        <a href=#games>Games</a><a href=#>About the Yard</a><a href=#>For Teachers</a>
-        <a class="button xsmall filled blue join-yard">Join the Yard</a>
-      </navigation>
-    </div>
-      <div id="navbar">
-        <a href="/">
-          <div id="brand">
-            <img src="assets/img/yard-logo.png">
-          </div>
+  <div class="yard">
+    <div class="main-cta-wrap">
+      <div class="main-cta">
+        <h1>Teach Science <br> with Games!</h1>
+        <h3 class="handwritten">BTW, They are Free and Online, Relax</h3>
+        <a href="#games" class="button white filled">
+           PLAY GAMES!
         </a>
-        <a class="button small white join-yard">Join the Yard</a>
       </div>
+    </div>
+    <navigation class="subnav">
+      <img class="darklogo" src="assets/img/yard-logo-dark.png">
+      <a href=#games>Games</a><a href=#>About the Yard</a><a href=#>For Teachers</a>
+      <a class="button xsmall filled blue join-yard">Join the Yard</a>
+    </navigation>
+  </div>
+  <div id="navbar">
+      <div id="brand">
+        <img src="assets/img/yard-logo.png">
+      </div>
+      <ul class="main-links">
+        <li>
+          <a href=#games>Games</a>
+        </li>
+        <li>
+          <a href=#>About the Yard</a>
+        </li>
+        <li>
+          <a href=#>For Teachers</a>
+        </li>
+      </ul>
+    </a>
+    <a class="button xsmall white join-yard">Join the Yard</a>
+  </div>
   <div class="animated">
     <div class="clouds clouds1"></div>
     <div class="clouds clouds2"></div>
@@ -75,6 +85,31 @@
     </div>
   </div>
 </div>
+
+<div class="mobile-nav-toggle-wrap">
+  <div class="mobile-nav-container">
+    <div class="content">
+      <img src="assets/img/icon-confetti.png">
+      <ul class="main-links">
+        <li>
+          <a href=#games>Games</a>
+        </li>
+        <li>
+          <a href=#>About the Yard</a>
+        </li>
+        <li>
+          <a href=#>For Teachers</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="nav-toggle">
+    <div class="icon"></div>
+  </div>
+</div>
+
+
+
 
 <section id="games" class="games">
   <div class="section-container">
@@ -187,21 +222,21 @@
       <h3>Play the carbon cycle game!</h3>
       <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
       <div class="row game-info-container">
-        <div class="col-md-4 game-info">
+        <div class="col-sm-4 game-info">
           <h4>Topics Addressed</h4>
           <ul>
             <li><a href="#"> sciency stuff</a>
             <li><a href="#"> sciency stuff</a>
           </ul>
         </div>
-        <div class="col-md-4 game-info">
+        <div class="col-sm-4 game-info">
           <h4>Standards Covered</h4>
           <ul>
             <li><a href="#"> sciency stuff</a>
             <li><a href="#"> sciency stuff</a>
           </ul>
         </div>
-        <div class="col-md-4 game-info">
+        <div class="col-sm-4 game-info">
           <h4>Game Types</h4>
           <ul>
             <li><a href="#"> single player</a>
@@ -321,18 +356,6 @@
     <a href="http://dpi.wi.gov/"><img src="assets/icons/dpilogo-white.png"></a>
   </p>
 </div>
-
-<div id="menu">
-    <a id="menu-x" href="#" onClick="event.preventDefault(); document.body.className = '';">
-      <img src="assets/icons/x.png">
-    </a>
-    <a href="/" class="raw-link">
-      home
-    </a>
-    <a href="about.html" class="raw-link">
-      about the yard
-    </a>
-</div>
 <div class="join-wrapper"></div>
 
 <script>
@@ -387,6 +410,10 @@ $(document).ready(function(){
           window.location.hash = target;
       });
   });
+});
+
+$('.mobile-nav-toggle-wrap').click(function(){
+  $('body').toggleClass('nav-open');
 });
 </script>
 

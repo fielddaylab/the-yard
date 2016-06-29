@@ -7,6 +7,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2px;
   color: $dark_gray;
+  &.nav-open {
+    overflow: hidden;
+  }
 }
 
 hr {

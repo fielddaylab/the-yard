@@ -5,7 +5,7 @@
  background: $creme;
  padding: 10vw;
  @media #{$break-xs} {
-  padding: 6vh;
+  padding: 0vh;
  }
 }
 
@@ -148,7 +148,11 @@
     border-radius: 20px;
     .game-info {
       padding: 30px 20px 40px 40px;
-      h4 { margin-bottom: 20px; }
+      @media #{$break-md} {
+        padding: 20px 20px 30px 30px;
+      }
+      h4 { margin-bottom: 10px; margin-top: 0px; font-size: 1em; }
+      a { font-size: .9em; }
       ul { padding-left: 0px; }
       li {
         list-style: none;
@@ -162,7 +166,10 @@
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .15em;
-    margin-bottom: 30px;
+    margin: 0px 0px 15px 0px;
+    @media #{$break-sm} {
+      margin-top: 20px;
+    }
   }
   p { font-weight: 200; }
   .game-thumbnail-expanded {
@@ -170,7 +177,13 @@
     display: block;
     height: 40vh;
     position: relative;
-    img { width: 100%; height: auto; }
+    @media #{$break-md} {
+      height: 150px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   .play-game {
     font-size: 1.4em;

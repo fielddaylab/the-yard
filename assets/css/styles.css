@@ -1770,7 +1770,7 @@
   margin-right: 15px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
-  @media only screen and (max-device-width: 991px), only screen and (max-width: 991px) {
+  @media only screen and (max-width: 1024px) {
     .button {
       padding: 12px 30px; } }
   .button:hover {
@@ -1890,6 +1890,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2px;
   color: #2B303B; }
+  body.nav-open {
+    overflow: hidden; }
 
 hr {
   height: 6px;
@@ -1928,23 +1930,37 @@ p, a {
 #navbar {
   color: white;
   width: 100%;
-  height: 170px;
   z-index: 500;
-  padding: 25px;
-  position: absolute; }
+  position: absolute;
+  padding: 20px; }
+  #navbar .main-links {
+    display: inline-block;
+    height: 100%; }
+    @media only screen and (max-width: 1024px) {
+      #navbar .main-links {
+        display: none; } }
+    #navbar .main-links li {
+      display: inline;
+      line-height: 5em; }
+  #navbar a {
+    color: #fff;
+    margin-right: 30px;
+    text-transform: uppercase;
+    letter-spacing: .2em; }
 
 .join-yard {
   float: right;
-  margin-right: 0px; }
+  margin-right: 0px;
+  margin-top: 17px; }
+  @media only screen and (max-width: 1024px) {
+    .join-yard {
+      margin-right: 90px !important; } }
 
 #brand {
-  float: left;
-  height: 100%; }
+  float: left; }
   #brand img {
-    height: 60%;
-    padding-left: 10px;
-    padding-top: 7px;
-    padding-bottom: 7px; }
+    height: 73px;
+    width: 173px; }
 
 #hamburger {
   float: right;
@@ -1955,33 +1971,33 @@ p, a {
     padding-bottom: 15px;
     padding-right: 15px; }
 
-#menu {
+.menu {
   z-index: 500;
   position: fixed;
   top: 0;
-  right: -250px;
   height: 100%;
-  background-color: #222830;
+  background-color: #D4B000;
   color: white;
   padding: 20px;
-  width: 250px;
-  transition-property: right;
+  width: 100%;
+  transition-property: top;
   transition-duration: 0.25s; }
-  #menu a {
+  .menu a {
     text-align: center;
-    border-bottom: 1px solid #080D13;
     padding: 30px 0px;
     color: #fff;
-    display: block; }
-    #menu a:hover {
+    display: block;
+    font-size: 1.5em;
+    text-transform: uppercase; }
+    .menu a:hover {
       color: #fff; }
 
 .menu-open #menu {
   right: 0; }
 
-#menu-x {
+.menu-x {
   text-align: left !important; }
-  #menu-x img {
+  .menu-x img {
     width: 25px; }
 
 .subnav {
@@ -1990,7 +2006,7 @@ p, a {
   background: #fff;
   padding: 20px;
   display: block;
-  position: absolute;
+  display: none;
   text-align: center;
   bottom: 0px;
   border-bottom: 1px solid #DDDDDD;
@@ -2011,9 +2027,12 @@ p, a {
   .subnav a {
     display: inline-block;
     color: #11141B;
-    margin: 0px 5vw; }
+    margin: 0px 30px;
+    text-transform: uppercase;
+    font-size: 1em; }
   .subnav.nav-fixed {
     position: fixed;
+    display: block;
     top: -90px;
     height: 70px;
     padding: 21px;
@@ -2024,12 +2043,141 @@ p, a {
     .subnav.nav-fixed .darklogo {
       transform: translateX(0px);
       transition: all .4s ease-in-out; }
+    @media only screen and (max-width: 1024px) {
+      .subnav.nav-fixed {
+        display: none !important; } }
 
 @keyframes navDrop {
   from {
     top: -90px; }
   to {
     top: 0px; } }
+
+.nav-open .mobile-nav-toggle-wrap {
+  box-shadow: none; }
+
+.nav-open .mobile-nav-toggle-wrap:before {
+  width: 4000px;
+  height: 4000px;
+  background-color: rgba(8, 188, 221, 0.95); }
+
+.nav-open .mobile-nav-toggle-wrap .icon {
+  width: 0; }
+
+.nav-open .mobile-nav-toggle-wrap .icon:before {
+  -webkit-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg); }
+
+.nav-open .mobile-nav-toggle-wrap .icon:after {
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+  -ms-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg); }
+
+.mobile-nav-toggle-wrap {
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  border-radius: 50%;
+  margin: 10px;
+  position: fixed;
+  right: 10px;
+  top: 13px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.66s;
+  transition-duration: 0.66s;
+  -webkit-transition-timing-function: swing;
+  transition-timing-function: swing;
+  display: none;
+  z-index: 500; }
+  @media only screen and (max-width: 1024px) {
+    .mobile-nav-toggle-wrap {
+      display: block; } }
+  .mobile-nav-toggle-wrap:before {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #F0C808;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transition-duration: 0.66s;
+    transition-duration: 0.66s;
+    -webkit-transition-timing-function: swing;
+    transition-timing-function: swing; }
+  .mobile-nav-toggle-wrap .mobile-nav-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 0;
+    -webkit-transition-duration: 0.66s;
+    transition-duration: 0.66s;
+    -webkit-transition-timing-function: swing;
+    transition-timing-function: swing;
+    transform: translateY(-500px); }
+    .mobile-nav-toggle-wrap .mobile-nav-container .content {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 90vw;
+      height: auto;
+      margin: 0 auto;
+      text-align: center; }
+      .mobile-nav-toggle-wrap .mobile-nav-container .content img {
+        width: 100px;
+        margin-bottom: 20px; }
+      .mobile-nav-toggle-wrap .mobile-nav-container .content ul {
+        padding-left: 0; }
+      .mobile-nav-toggle-wrap .mobile-nav-container .content li {
+        list-style: none;
+        padding: 20px; }
+        .mobile-nav-toggle-wrap .mobile-nav-container .content li a {
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: .4em;
+          font-weight: 700; }
+  .mobile-nav-toggle-wrap .icon {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    top: 28px;
+    left: 15px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    transiting-timing-function: swing; }
+
+.nav-open .mobile-nav-toggle-wrap .mobile-nav-container {
+  transform: translateY(0px);
+  width: 100vw;
+  height: 100vh; }
+
+.mobile-nav-toggle-wrap .icon:before,
+.mobile-nav-toggle-wrap .icon:after {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  content: "";
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  transiting-timing-function: swing; }
+
+.mobile-nav-toggle-wrap .icon:before {
+  top: -9px; }
+
+.mobile-nav-toggle-wrap .icon:after {
+  top: 9px; }
 
 /* Layout
 ------------------------------------------ */
@@ -2271,8 +2419,9 @@ section {
         background-size: 2000px 600px;
         opacity: 0.7;
         top: 20vh;
-        left: 0; }
-        @media only screen and (min-device-width: 992px), only screen and (min-width: 992px) {
+        left: 0;
+        animation: cloudMotion 70s linear infinite; }
+        @media only screen and (min-width: 1025px) {
           .hero .animated .clouds.clouds1 {
             animation: cloudMotion 30s linear infinite; } }
       .hero .animated .clouds.clouds2 {
@@ -2280,8 +2429,9 @@ section {
         background-size: 900px 300px;
         top: 70vh;
         left: 0;
-        opacity: 0.7; }
-        @media only screen and (min-device-width: 992px), only screen and (min-width: 992px) {
+        opacity: 0.7;
+        animation: cloudMotion 70s linear infinite; }
+        @media only screen and (min-width: 1025px) {
           .hero .animated .clouds.clouds2 {
             animation: cloudMotion 30s linear infinite; } }
   .hero .balloon {
@@ -2327,16 +2477,23 @@ section {
         text-shadow: 0px 2px 3px #6C6A6A; }
       .hero .yard .main-cta h1 {
         font-weight: 600;
-        font-size: 4vw;
+        font-size: 4.5vw;
         letter-spacing: .4em;
         line-height: 5vw; }
-        @media only screen and (max-device-width: 991px), only screen and (max-width: 991px) {
+        @media only screen and (min-device-width: 1420px), only screen and (min-width: 1420px) {
+          .hero .yard .main-cta h1 {
+            font-size: 3vw;
+            line-height: 4vw; } }
+        @media only screen and (max-width: 768px) {
           .hero .yard .main-cta h1 {
             font-size: 6vw;
             line-height: 8vw; } }
       .hero .yard .main-cta h3 {
-        font-size: 2.5vw; }
-        @media only screen and (max-device-width: 991px), only screen and (max-width: 991px) {
+        font-size: 3.5vw; }
+        @media only screen and (min-device-width: 1420px), only screen and (min-width: 1420px) {
+          .hero .yard .main-cta h3 {
+            font-size: 2vw; } }
+        @media only screen and (max-width: 768px) {
           .hero .yard .main-cta h3 {
             font-size: 4vw; } }
       .hero .yard .main-cta .play-games {
@@ -2384,7 +2541,7 @@ section {
   padding: 10vw; }
   @media only screen and (max-device-width: 400px), only screen and (max-width: 400px) {
     .games {
-      padding: 6vh; } }
+      padding: 0vh; } }
 
 .gridder {
   margin: 0px;
@@ -2400,10 +2557,10 @@ section {
   margin-bottom: 2%;
   cursor: pointer;
   transition: all .3s ease-in-out; }
-  @media only screen and (max-device-width: 991px), only screen and (max-width: 991px) {
+  @media only screen and (max-width: 1024px) {
     .gridder-list {
       width: 47%; } }
-  @media only screen and (max-device-width: 767px), only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .gridder-list {
       width: 95%; } }
   .gridder-list .game-thumbnail {
@@ -2504,8 +2661,15 @@ section {
     border-radius: 20px; }
     .gridder-expanded-content .game-info-container .game-info {
       padding: 30px 20px 40px 40px; }
+      @media only screen and (max-width: 1024px) {
+        .gridder-expanded-content .game-info-container .game-info {
+          padding: 20px 20px 30px 30px; } }
       .gridder-expanded-content .game-info-container .game-info h4 {
-        margin-bottom: 20px; }
+        margin-bottom: 10px;
+        margin-top: 0px;
+        font-size: 1em; }
+      .gridder-expanded-content .game-info-container .game-info a {
+        font-size: .9em; }
       .gridder-expanded-content .game-info-container .game-info ul {
         padding-left: 0px; }
       .gridder-expanded-content .game-info-container .game-info li {
@@ -2516,7 +2680,10 @@ section {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .15em;
-    margin-bottom: 30px; }
+    margin: 0px 0px 15px 0px; }
+    @media only screen and (max-width: 768px) {
+      .gridder-expanded-content h3 {
+        margin-top: 20px; } }
   .gridder-expanded-content p {
     font-weight: 200; }
   .gridder-expanded-content .game-thumbnail-expanded {
@@ -2524,6 +2691,9 @@ section {
     display: block;
     height: 40vh;
     position: relative; }
+    @media only screen and (max-width: 1024px) {
+      .gridder-expanded-content .game-thumbnail-expanded {
+        height: 150px; } }
     .gridder-expanded-content .game-thumbnail-expanded img {
       width: 100%;
       height: auto; }
