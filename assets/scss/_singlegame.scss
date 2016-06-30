@@ -1,0 +1,87 @@
+
+.singlegame {
+  overflow-x: hidden;
+  .game-area {
+    background: $creme;
+    width: 100%;
+    height: 90vh;
+    .brand {
+      position: absolute;
+      background:url("../../assets/img/yard-logo-dark.png") no-repeat;
+      height: 73px;
+      width: 173px;
+      background-size: 173px 73px;
+      left: 20px;
+      top: 20px;
+    }
+    .mobile-nav-toggle-wrap {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: block !important;
+    }
+    .game-iframe {
+      width: 880px;
+      height: 660px;
+      background: $blue;
+      margin: 0 auto;
+      @include vertical-align;
+    }
+  }
+  .breakouts-wrap {
+    text-align: center;
+  }
+  .breakout-nav {
+    display: inline;
+    text-align: center;
+    width: 100%;
+    ul {
+      border-bottom:2px solid $blue;
+    }
+    li {
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      padding: 30px;
+      text-transform: uppercase;
+    }
+  }
+  .breakouts {
+    overflow: hidden;
+    min-height:50vh;
+    position: relative;
+    transition-duration: 0.66s;
+    -webkit-transition-timing-function: swing;
+    transition-timing-function: swing;
+    width: 200%;
+    .breakout {
+      position: absolute;
+      float: right;
+      min-height: 50vh;
+      width: 50%;
+      display: block;
+    }
+    .game-outline {
+      top: 0;
+      left: 0;
+    }
+    .forteachers {
+      top: 0;
+      right: 0;
+      min-height: 80vh;
+    }
+    &.shiftright {
+      transform:translateX(-50%);
+      .forteachers {
+
+      }
+    }
+  }
+  .content {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 5vw;
+    max-width: 800px;
+  }
+}
