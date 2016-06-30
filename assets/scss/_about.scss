@@ -6,3 +6,28 @@
     text-transform: uppercase;
   }
 }
+
+.about-theyard {
+  background: $creme;
+  .about {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 80px;
+    position: relative;
+    .about-content {
+      @include vertical-align;
+    }
+    .about-picture {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+    h2 {
+      margin: 25px 25px 25px 0px;
+    }
+    p {
+      margin-top: 40px;
+    }
+  }
+}

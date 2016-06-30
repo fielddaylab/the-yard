@@ -4,6 +4,10 @@
 .games {
  background: $creme;
  padding: 10vw;
+ overflow: hidden;
+ @media #{$break-sm}  {
+  padding: 7vw;
+ }
  @media #{$break-xs} {
   padding: 0vh;
  }
@@ -24,11 +28,8 @@
     margin-bottom: 2%;
     cursor: pointer;
     transition: all .3s ease-in-out;
-    @media #{$break-md} {
-      width: 47%;
-    }
     @media #{$break-sm} {
-      width: 95%;
+      width: 47%;
     }
     .game-thumbnail {
       width: 100%;
@@ -179,6 +180,9 @@
     position: relative;
     @media #{$break-md} {
       height: 150px;
+    }
+    @media #{$break-sm} {
+      display: none;
     }
     img {
       width: 100%;

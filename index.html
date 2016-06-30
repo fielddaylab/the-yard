@@ -39,6 +39,8 @@
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 <script src="assets/js/vendor/jquery-3.0.0.min.js"></script>
 <script src="assets/js/vendor/jquery.gridder.js"></script>
+<script src='assets/js/vendor/fastclick.js'></script>
+<script src='assets/js/vendor/buddysystem.jquery.js'></script>
 </head>
 <body>
 
@@ -90,15 +92,21 @@
   <div class="mobile-nav-container">
     <div class="content">
       <img src="assets/img/icon-confetti.png">
-      <ul class="main-links">
+      <ul class="mobile-links">
         <li>
           <a href=#games>Games</a>
         </li>
+        <hr>
         <li>
           <a href=#>About the Yard</a>
         </li>
+        <hr>
         <li>
           <a href=#>For Teachers</a>
+        </li>
+        <hr>
+        <li>
+          <a class="button white" href=#>Join the Yard</a>
         </li>
       </ul>
     </div>
@@ -107,9 +115,6 @@
     <div class="icon"></div>
   </div>
 </div>
-
-
-
 
 <section id="games" class="games">
   <div class="section-container">
@@ -121,7 +126,7 @@
          <!-- You can load specify which content is loaded by specifying the #ID of the div where the content is  -->
         <li class="gridder-list" data-griddercontent="#game1">
         <div class="game-thumbnail">
-          <img src="assets/img/carbon-cycle-bg.jpg">
+          <img src="assets/img/thumbnails/carbon-cycle-thumb.jpg">
         </div>
           <div class="card-summary">
             <h3>Carbon Cycle</h3>
@@ -131,80 +136,80 @@
         </li>
         <li class="gridder-list" data-griddercontent="#game2">
           <div class="game-thumbnail">
-            <img src="assets/img/carbon-cycle-bg.jpg">
+            <img src="assets/img/thumbnails/water-cycle-thumb.jpg">
           </div>
           <div class="card-summary">
-            <h3>Carbon Cycle</h3>
+            <h3>Water Cycle</h3>
             <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
             <span class="card-triangle"></span>
           </div>
         </li>
         <li class="gridder-list" data-griddercontent="#game3">
           <div class="game-thumbnail">
-            <img src="assets/img/carbon-cycle-bg.jpg">
+            <img src="assets/img/thumbnails/magnetism-thumb.jpg">
           </div>
           <div class="card-summary">
-            <h3>Carbon Cycle</h3>
+            <h3>Magnetism</h3>
             <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
             <span class="card-triangle"></span>
           </div>
         </li>
         <li class="gridder-list" data-griddercontent="#game4">
           <div class="game-thumbnail">
-            <img src="assets/img/carbon-cycle-bg.jpg">
+            <img src="assets/img/thumbnails/balloon-thumb.jpg">
           </div>
           <div class="card-summary">
-            <h3>Carbon Cycle</h3>
+            <h3>Hot Air Balloon</h3>
             <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
             <span class="card-triangle"></span>
           </div>
         </li>
         <li class="gridder-list" data-griddercontent="#game5">
           <div class="game-thumbnail">
-            <img src="assets/img/carbon-cycle-bg.jpg">
+            <img src="assets/img/thumbnails/earthquake-thumb.jpg">
           </div>
           <div class="card-summary">
-            <h3>Carbon Cycle</h3>
+            <h3>Earthquake!</h3>
             <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
             <span class="card-triangle"></span>
           </div>
         </li>
         <li class="gridder-list" data-griddercontent="#game6">
           <div class="game-thumbnail">
-            <img src="assets/img/carbon-cycle-bg.jpg">
+            <img src="assets/img/thumbnails/nitrogen-cycle-thumb.jpg">
           </div>
           <div class="card-summary">
-            <h3>Carbon Cycle</h3>
+            <h3>Nitrogen Cycle</h3>
             <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
             <span class="card-triangle"></span>
           </div>
         </li>
         <li class="gridder-list" data-griddercontent="#game7">
           <div class="game-thumbnail">
-            <img src="assets/img/carbon-cycle-bg.jpg">
+            <img src="assets/img/thumbnails/wave-thumb.jpg">
           </div>
           <div class="card-summary">
-            <h3>Carbon Cycle</h3>
+            <h3>Wave Combinator</h3>
             <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
             <span class="card-triangle"></span>
           </div>
         </li>
         <li class="gridder-list" data-griddercontent="#game8">
           <div class="game-thumbnail">
-            <img src="assets/img/carbon-cycle-bg.jpg">
+            <img src="assets/img/thumbnails/bacteria-thumb.jpg">
           </div>
           <div class="card-summary">
-            <h3>Carbon Cycle</h3>
+            <h3>Bacteria!</h3>
             <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
             <span class="card-triangle"></span>
           </div>
         </li>
         <li class="gridder-list" data-griddercontent="#game9">
           <div class="game-thumbnail">
-            <img src="assets/img/carbon-cycle-bg.jpg">
+            <img src="assets/img/thumbnails/wind-thumb.jpg">
           </div>
           <div class="card-summary">
-            <h3>Carbon Cycle</h3>
+            <h3>Wind Simulator</h3>
             <p>Learn about how carbon moves through our environment in this exciting card game with the kids from the yard!</p>
             <span class="card-triangle"></span>
           </div>
@@ -212,11 +217,13 @@
     </ul>
   </div>
 </section>
+
+
 <!-- Gridder content -->
 <div id="game1" class="gridder-content">
   <div class="row">
     <div class="col-md-3 game-thumbnail-expanded">
-      <img src="assets/img/carbon-cycle-bg.jpg">
+      <img src="assets/img/thumbnails/carbon-cycle-thumb.jpg">
     </div>
     <div class="col-md-9 game-expanded">
       <h3>Play the carbon cycle game!</h3>
@@ -248,8 +255,294 @@
     </div>
   </div>
 </div>
-<div id="game2" class="gridder-content"> Content goes here... </div>
-<div id="game3" class="gridder-content"> Content goes here... </div>
+
+<div id="game2" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/thumbnails/water-cycle-thumb.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play the Water cycle game!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-sm-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled play-game"> play! </a>
+    </div>
+  </div>
+</div>
+
+<div id="game3" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/thumbnails/magnetism-thumb.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play the magnetism game!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-sm-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled play-game"> play! </a>
+    </div>
+  </div>
+</div>
+
+<div id="game4" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/thumbnails/balloon-thumb.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play hot air balloon!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-sm-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled play-game"> play! </a>
+    </div>
+  </div>
+</div>
+
+<div id="game5" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/thumbnails/earthquake-thumb.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play earthquake!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-sm-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled play-game"> play! </a>
+    </div>
+  </div>
+</div>
+
+<div id="game6" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/thumbnails/nitrogen-cycle-thumb.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play the nitrogen cycle game!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-sm-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled play-game"> play! </a>
+    </div>
+  </div>
+</div>
+
+<div id="game7" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/thumbnails/wave-thumb.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play the wave combinator!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-sm-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled play-game"> play! </a>
+    </div>
+  </div>
+</div>
+
+<div id="game8" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/thumbnails/bacteria-thumb.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play bacteria resistance!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-sm-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled play-game"> play! </a>
+    </div>
+  </div>
+</div>
+
+<div id="game9" class="gridder-content">
+  <div class="row">
+    <div class="col-md-3 game-thumbnail-expanded">
+      <img src="assets/img/thumbnails/wind-thumb.jpg">
+    </div>
+    <div class="col-md-9 game-expanded">
+      <h3>Play the wind simulator!</h3>
+      <p>When the Kids find an old card game under a rusty old boat, they play it only to discover it’s educational! Say Whaaat? You must master the carbon cycle in order to collect enough carbons to beat your opponent, now that’s edutainment!</p>
+      <div class="row game-info-container">
+        <div class="col-sm-4 game-info">
+          <h4>Topics Addressed</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Standards Covered</h4>
+          <ul>
+            <li><a href="#"> sciency stuff</a>
+            <li><a href="#"> sciency stuff</a>
+          </ul>
+        </div>
+        <div class="col-sm-4 game-info">
+          <h4>Game Types</h4>
+          <ul>
+            <li><a href="#"> single player</a>
+            <li><a href="#"> multiplayer</a>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="button blue filled play-game"> play! </a>
+    </div>
+  </div>
+</div>
 
 <section id="aboutgames" class="aboutgames">
   <div class="section-container">
@@ -310,9 +603,9 @@
   <div class="link-wrap">
     <div class="link-content">
       <span class="link-flag"></span>
-      <h3>Teachers Work to Help Kids who Hate Science</h3>
+      <h3 class="corrected">Teachers Work to Help Kids who Hate Science</h3>
       <hr>
-      <p>Teachers work every day to help kids get back in touch with the explorer inside themselves. This year, seven teachers have poured their hearts into The Yard Games: captivating, tightly-focused activities for kids that break down the hardest scientific topics from the next-gen middle school science standards.</p>
+      <p>Learn how seven teachers poured their hearts into making captivating, tightly-focused activities for kids that break down the hardest scientific topics from the next-gen middle school science standards.</p>
       <a class="button xsmall" target="_blank" href="https://medium.com/@fielddaylab/teachers-work-to-help-kids-who-hate-science-cfeb567a194d#.td8z56lf4">read more</a>
     </div>
   </div>
@@ -324,9 +617,9 @@
   <div class="link-wrap">
     <div class="link-content">
       <span class="link-flag"></span>
-      <h3>Teachers Work to Help Kids who Hate Science</h3>
+      <h3 class="corrected">Teachers Work to Help Kids who Hate Science</h3>
       <hr>
-      <p>Teachers work every day to help kids get back in touch with the explorer inside themselves. This year, seven teachers have poured their hearts into The Yard Games: captivating, tightly-focused activities for kids that break down the hardest scientific topics from the next-gen middle school science standards.</p>
+      <p>Learn how seven teachers poured their hearts into making captivating, tightly-focused activities for kids that break down the hardest scientific topics from the next-gen middle school science standards.</p>
       <a class="button xsmall" target="_blank" href="https://medium.com/@fielddaylab/teachers-work-to-help-kids-who-hate-science-cfeb567a194d#.td8z56lf4">read more</a>
     </div>
   </div>
@@ -415,6 +708,12 @@ $(document).ready(function(){
 $('.mobile-nav-toggle-wrap').click(function(){
   $('body').toggleClass('nav-open');
 });
+
+$(function() {
+    FastClick.attach(document.body);
+});
+
+$('.corrected').buddySystem()
 </script>
 
 

@@ -23,7 +23,6 @@
     margin-right: 30px;
     text-transform: uppercase;
     letter-spacing: .2em;
-
   }
 }
 
@@ -223,13 +222,18 @@
     .content {
       img {
         width: 100px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
       @include vertical-align;
       width: 90vw;
       height: auto;
       margin: 0 auto;
       text-align: center;
+      hr {
+        height: 3px;
+        border: 0;
+        background-color: $dark_blue;
+      }
       ul {
         padding-left: 0;
       }

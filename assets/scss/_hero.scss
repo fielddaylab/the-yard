@@ -9,6 +9,9 @@
   position: relative;
   background-position: center;
   background: linear-gradient(to bottom,rgba(21, 134, 156, 1.0), rgba(243, 253, 255, 1.0));
+  @media #{$break-md} {
+    height: 110vh;
+  }
   .animated {
     width: 100%;
     height: inherit;
@@ -68,6 +71,9 @@
     height: 150vh;
     z-index: 200;
     bottom: 0;
+    @media #{$break-md} {
+      height: 110vh;
+    }
     .main-cta-wrap {
       height:100vh;
       position: relative;
