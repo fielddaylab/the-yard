@@ -6,6 +6,15 @@
   padding: 30px;
   text-align: center;
   font-size: 12px;
+  p {
+    color: $fd_blue;
+    padding: 5vw 5vw 3vw 5vw;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    line-height: 2.4em;
+  }
 }
 
 #footer img {
