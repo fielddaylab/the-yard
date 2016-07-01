@@ -76,25 +76,52 @@
     </div>
   </div>
   <div class="game-iframe"></div>
+  <span class="mobile-breakout-toggle">mobile menu</span>
 </div>
 <div class="breakouts-wrap">
   <div class="breakout-nav">
     <ul>
-      <li class="breakout-about"><a href="#game-outline">About bouyancy</a></li>
-      <li class="breakout-teachers"><a href="#forteachers">for teachers</a></li>
+      <span class="mobile-breakout-toggle">mobile menu</span>
+      <li class="breakout-about"><a>About bouyancy</a></li>
+      <li class="breakout-teachers"><a>for teachers</a></li>
     </ul>
   </div>
   <div class="breakouts">
     <div id="game-outline" class="breakout information game-outline">
       <div class="content">
-        <img class="game-info-embelishment">
+        <img class="game-info-embelishment img-responsive" src="../assets/img/singlegame/balloon.png">
         <h2>About Hot Air Balloon</h2>
         <hr>
         <p>In science, buoyancy (also known as upthrust) is an upward force exerted by a fluid that opposes the weight of an immersed object. The density, or more precisely, the volumetric mass density, of a substance is its mass per unit volume. </p>
       </div>
     </div>
     <div id="forteachers" class="breakout information forteachers">
-      <p>For Teachers</p>
+      <div class="content">
+        <h2>For Teachers</h2>
+        <hr>
+        <h3>Key Concepts</h3>
+        <p>The Hot Balloon game lets you control the altitude of the balloon through heating the balloon or releasing air from the air flaps. Hot air rises the balloon through a force called buoyancy. The difference between the outside and the inside air determines the amount of buoyancy. Using weight difference, wind speeds and limited fuel the balloon can go on the farthest rides.</p>
+        <ul>
+          <li>Topics Addressed</li>
+          <li>Hot Air Rises</li>
+          <li>Buoyancy</li>
+          <li>Altitude</li>
+          <li>Density</li>
+          <li>Acceleration</li>
+          <li>Velocity</li>
+        </ul>
+      </div>
+
+Standards Covered
+
+
+
+Goals
+The Hot Air Balloon Game will support exploration of the following concepts:
+The relationship between temperature and volume, volume and density.
+Buoyancy is the force created by the denser air pushing the less dense balloon upward.
+When the buoyant force is greater than gravity, upward acceleration is created.
+
     </div>
   </div>
 </div>
@@ -175,6 +202,10 @@ $('.breakout-teachers').click(function(){
 
 $('.breakout-about').click(function(){
   $('.breakouts').removeClass('shiftright');
+});
+
+$('.mobile-breakout-toggle').click(function(){
+  $('.singlegame').toggleClass('breakouts-open');
 });
 
 $(function() {
