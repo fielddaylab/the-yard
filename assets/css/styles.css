@@ -2146,7 +2146,8 @@ p, a {
           color: #fff;
           text-transform: uppercase;
           letter-spacing: .4em;
-          font-weight: 700; }
+          font-weight: 700;
+          margin-right: 0; }
   .mobile-nav-toggle-wrap .icon {
     width: 30px;
     height: 4px;
@@ -2767,7 +2768,8 @@ html, body {
 .singlegame.breakouts-open {
   overflow-y: initial; }
   .singlegame.breakouts-open .breakouts-wrap {
-    transform: translateY(0vh); }
+    transform: translateY(0%);
+    top: 0; }
 
 .singlegame .game-area {
   background: #F6F6F3;
@@ -2788,7 +2790,7 @@ html, body {
     position: absolute;
     top: 20px;
     right: 20px;
-    display: none !important; }
+    display: block !important; }
   .singlegame .game-area .game-iframe {
     width: 880px;
     height: 660px;
@@ -2808,7 +2810,7 @@ html, body {
       left: 0;
       background: #fff;
       position: absolute;
-      transform: translateY(100vh);
+      transform: translateY(100%);
       transition-duration: 0.66s;
       -webkit-transition-timing-function: swing;
       transition-timing-function: swing; } }
