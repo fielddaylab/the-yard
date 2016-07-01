@@ -1,7 +1,3 @@
-[submodule "game/water"]
-	path = game/water
-	url = https://github.com/fielddaylab/cycle.git
-	branch = master
 [submodule "game/carbon"]
 	path = game/carbon
 	url = https://github.com/fielddaylab/cycle.git
@@ -10,17 +6,9 @@
 	path = game/nitrogen
 	url = https://github.com/fielddaylab/cycle.git
 	branch = master
-[submodule "game/balloon"]
-	path = game/balloon
-	url = https://github.com/fielddaylab/balloon.git
-	branch = master
-[submodule "game/earthquake"]
-	path = game/earthquake
-	url = https://github.com/fielddaylab/earthquake.git
-	branch = master
-[submodule "game/magnetism"]
-	path = game/magnetism
-	url = https://github.com/fielddaylab/magnetism.git
+[submodule "game/water"]
+	path = game/water
+	url = https://github.com/fielddaylab/cycle.git
 	branch = master
 [submodule "game/bacteria"]
 	path = game/bacteria
@@ -33,4 +21,16 @@
 [submodule "game/wind"]
 	path = game/wind
 	url = https://github.com/fielddaylab/wind.git
+	branch = master
+[submodule "game/magnetism"]
+	path = game/magnetism
+	url = https://github.com/fielddaylab/magnetism.git
+	branch = master
+[submodule "game/balloon"]
+	path = game/balloon
+	url = https://github.com/fielddaylab/balloon.git
+	branch = master
+[submodule "game/earthquake"]
+	path = game/earthquake
+	url = https://github.com/fielddaylab/earthquake.git
 	branch = master
