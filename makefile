@@ -33,3 +33,7 @@ game/carbon/src/scenes/config.js: game/carbon
 cleancycleconfig:
 	@rm game/nitrogen/src/scenes/config.js ; rm game/water/src/scenes/config.js ; rm game/carbon/src/scenes/config.js
 
+#Deployment
+
+deploy-beta: submodules cycleconfig
+	rsync -vrc * tyg@theyardgames.org:/httpdocs/beta --exclude-from rsync-exclude
