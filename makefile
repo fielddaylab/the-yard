@@ -35,5 +35,5 @@ cleancycleconfig:
 
 #Deployment
 
-deploy-beta: submodules cycleconfig
+deploy-beta: cycleconfig
 	rsync -vrc * tyg@theyardgames.org:/httpdocs/beta --exclude-from rsync-exclude
