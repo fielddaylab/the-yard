@@ -2817,7 +2817,7 @@ html, body {
     height: 660px;
     background: #06AED5;
     display: block;
-    margin: 0 auto;
+    margin-left: calc(50vw - 440px);
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
