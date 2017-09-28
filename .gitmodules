@@ -36,7 +36,7 @@
 	branch = master
 [submodule "game/model"]
 	path = game/model
-	url = git@github.com:fielddaylab/model
+	url = https://github.com/fielddaylab/model.git
 [submodule "game/crystal"]
 	path = game/crystal
-	url = git@github.com:fielddaylab/crystal
+	url = https://github.com/fielddaylab/crystal.git
