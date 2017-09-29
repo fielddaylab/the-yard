@@ -3,8 +3,20 @@ html,body {
   overflow-x: hidden;
   padding: 0;
 }
+.game-resourcetab {
+  position:absolute;
+  bottom:0;
+  right:30px;
+  img {
+    width: 200px;
+    height: auto;
+  }
+  @media only screen and (max-width: 1324px) {
+    display: none;
+  }
+}
 .singlegame {
-  @media #{$break-md} {
+  @media only screen and (max-width: 1324px) {
     overflow-y:hidden;
     height: 100vh;
   }
@@ -14,7 +26,7 @@ html,body {
     .breakouts-wrap {
       transform:translateY(0%);
       top: 0;
-      @media #{$break-md} {
+      @media only screen and (max-width: 1324px) {
         z-index:1000;
       }
     }
@@ -23,6 +35,7 @@ html,body {
     background: #fff;
     width: 100%;
     height: 100vh;
+    position:relative;
     .brand {
       position: absolute;
       background:url("../../assets/img/yard-logo-dark.png") no-repeat;
@@ -73,7 +86,7 @@ html,body {
   }
   .breakouts-wrap {
     text-align: center;
-    @media #{$break-md} {
+    @media only screen and (max-width: 1324px) {
       bottom: 0;
       left: 0;
       background: #fff;
@@ -164,7 +177,7 @@ html,body {
 
 .mobile-breakout-toggle {
   display: none;
-  @media #{$break-md} {
+  @media only screen and (max-width: 1324px) {
     display: inline-block;
   }
 }
