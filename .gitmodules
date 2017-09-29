@@ -34,3 +34,9 @@
 	path = game/earthquake
 	url = https://github.com/fielddaylab/earthquake.git
 	branch = master
+[submodule "game/model"]
+	path = game/model
+	url = https://github.com/fielddaylab/model.git
+[submodule "game/crystal"]
+	path = game/crystal
+	url = https://github.com/fielddaylab/crystal.git
