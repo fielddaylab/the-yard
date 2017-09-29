@@ -2690,9 +2690,11 @@ section {
       .gridder-expanded-content .game-info-container .game-info ul {
         padding-left: 0px; }
       .gridder-expanded-content .game-info-container .game-info li {
-        list-style: none;
         text-indent: 0px;
-        font-weight: 200; }
+        font-weight: 200;
+        list-style: circle;
+        font-size: 13px;
+        margin-left: 20px; }
   .gridder-expanded-content h3 {
     text-transform: uppercase;
     font-weight: 600;
