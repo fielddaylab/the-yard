@@ -2690,9 +2690,11 @@ section {
       .gridder-expanded-content .game-info-container .game-info ul {
         padding-left: 0px; }
       .gridder-expanded-content .game-info-container .game-info li {
-        list-style: none;
         text-indent: 0px;
-        font-weight: 200; }
+        font-weight: 200;
+        list-style: circle;
+        font-size: 13px;
+        margin-left: 20px; }
   .gridder-expanded-content h3 {
     text-transform: uppercase;
     font-weight: 600;
@@ -2760,7 +2762,18 @@ html, body {
   overflow-x: hidden;
   padding: 0; }
 
-@media only screen and (max-width: 1024px) {
+.game-resourcetab {
+  position: absolute;
+  bottom: 0;
+  right: 30px; }
+  .game-resourcetab img {
+    width: 200px;
+    height: auto; }
+  @media only screen and (max-width: 1324px) {
+    .game-resourcetab {
+      display: none; } }
+
+@media only screen and (max-width: 1324px) {
   .singlegame {
     overflow-y: hidden;
     height: 100vh; } }
@@ -2771,14 +2784,15 @@ html, body {
   .singlegame.breakouts-open .breakouts-wrap {
     transform: translateY(0%);
     top: 0; }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1324px) {
       .singlegame.breakouts-open .breakouts-wrap {
         z-index: 1000; } }
 
 .singlegame .game-area {
   background: #fff;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   .singlegame .game-area .brand {
     position: absolute;
     background: url("../../assets/img/yard-logo-dark.png") no-repeat;
@@ -2827,7 +2841,7 @@ html, body {
 
 .singlegame .breakouts-wrap {
   text-align: center; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1324px) {
     .singlegame .breakouts-wrap {
       bottom: 0;
       left: 0;
@@ -2900,7 +2914,7 @@ html, body {
 
 .mobile-breakout-toggle {
   display: none; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1324px) {
     .mobile-breakout-toggle {
       display: inline-block; } }
 
