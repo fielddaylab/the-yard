@@ -77,7 +77,6 @@ html,body {
     .game-iframe {
       width: 880px;
       height: 660px;
-      background: $blue;
       display: block;
       margin-left: calc(50vw - 440px);
       @include vertical-align;
