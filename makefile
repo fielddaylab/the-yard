@@ -3,9 +3,8 @@
 submodules:
 	@git submodule init && git submodule update
 
-submodulemaster:
-	@for i in `find game -type d -maxdepth 1`; do if [ $$i != game ]; then cd $$i; git checkout master; git pull; cd -; fi; done;
-
+pullnewestgamesubmodules:
+	@git submodule update --remote --merge
 
 #Cycle Config
 
